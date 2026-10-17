@@ -1,0 +1,21 @@
+[
+  {
+    "_comment": "EXAMPLE planted adverse event. Synthea never makes a drug cause anything, so planted events are the only true positives. Copy this block to add more. The answer key is never shown in the app; it is for checking the tool's output.",
+    "patient_id": "958114b2-7fea-ddc9-77f0-b803f1235869",
+    "drug": {
+      "description": "amiodarone hydrochloride 200 MG Oral Tablet",
+      "start": "2022-03-01",
+      "stop": "2022-04-15",
+      "reason": "Atrial fibrillation (disorder)"
+    },
+    "condition": {
+      "description": "Hepatic enzyme increased (disorder)",
+      "start": "2022-04-12",
+      "stop": "2022-05-20"
+    },
+    "answer": {
+      "cause": "amiodarone hydrochloride 200 MG Oral Tablet",
+      "why": "Liver enzymes rose 6 weeks after starting amiodarone and returned to normal about 5 weeks after it was stopped (positive dechallenge). Amiodarone's label warns of hepatic injury."
+    }
+  }
+]

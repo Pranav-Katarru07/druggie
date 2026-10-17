@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Druggie</title>
+<style>
+  body { font-family: system-ui, sans-serif; margin: 0 auto; max-width: 860px; padding: 16px; background: #f6f7f9; color: #1c1f23; }
+  h1 { font-size: 1.4rem; margin-bottom: 4px; }
+  .disclaimer { color: #5b6470; font-size: 0.85rem; margin: 0 0 16px; }
+  .patient { background: #fff; border: 1px solid #dde1e6; border-radius: 8px; margin-bottom: 10px; }
+  .patient > button { all: unset; display: block; width: 100%; box-sizing: border-box; padding: 12px 16px; cursor: pointer; }
+  .patient > button:hover { background: #f0f3f7; }
+  .meta { color: #5b6470; font-size: 0.85rem; }
+  .reactions { margin-top: 4px; }
+  .tag { display: inline-block; background: #fde8e8; color: #9b1c1c; border-radius: 12px; padding: 2px 10px; margin: 2px 4px 2px 0; font-size: 0.85rem; }
+  .body { display: none; padding: 0 16px 14px; border-top: 1px solid #eef0f3; }
+  .patient.open .body { display: block; }
+  h2 { font-size: 1rem; margin: 16px 0 6px; }
+  .reaction { margin-top: 10px; padding: 10px 12px; background: #fafbfc; border: 1px solid #eef0f3; border-radius: 6px; }
+  .reaction h4 { margin: 0 0 6px; font-size: 0.95rem; }
+  .candidate { margin: 8px 0 0; padding-top: 8px; border-top: 1px dashed #e3e6ea; }
+  .candidate:first-of-type { border-top: 0; padding-top: 0; }
+  .candidate strong { font-size: 0.9rem; }
+  .reasons { margin: 4px 0 0; padding-left: 0; list-style: none; font-size: 0.85rem; line-height: 1.45; }
+  .reasons li { padding-left: 18px; position: relative; margin: 2px 0; }
+  .reasons li::before { position: absolute; left: 0; font-weight: 700; }
+  .reasons .for::before { content: "+"; color: #15803d; }
+  .reasons .against::before { content: "–"; color: #b91c1c; }
+  .reasons .unknown::before { content: "?"; color: #8a93a0; }
+  .reasons .unknown { color: #6b7380; }
+  blockquote { margin: 3px 0 4px; padding: 4px 8px; border-left: 3px solid #cbd5e1; color: #475569; background: #fff; font-size: 0.8rem; }
+  .drug { margin-top: 12px; }
+  .drug h3 { margin: 0; font-size: 0.95rem; }
+  .role { font-size: 0.75rem; padding: 1px 8px; border-radius: 10px; margin-left: 6px; background: #e8eefc; color: #1e40af; font-weight: 500; }
+  .role.Suspect { background: #fff1d6; color: #92400e; }
+  details { margin-top: 6px; }
+  summary { cursor: pointer; font-weight: 600; font-size: 0.85rem; }
+  details p { margin: 4px 0 8px; font-size: 0.85rem; line-height: 1.4; white-space: pre-wrap; }
+  .none { color: #8a93a0; font-size: 0.85rem; font-style: italic; }
+</style>
+</head>
+<body>
+<h1>Patients</h1>
+<p class="disclaimer">Draft evidence for physician review. Possible causes are listed with the reasons for and against each drug, not a final determination.</p>
+<div id="list"></div>
+
+<script src="data.js"></script>
+<script>
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const role = r => `<span class="role ${r}">${r}</span>`;
+
+  function reasonList(cls, items) {
+    return items.map(r => `<li class="${cls}">${esc(r.text)}${r.quote ? `<blockquote>“${esc(r.quote)}”</blockquote>` : ""}</li>`).join("");
+  }
+
+  function candidateHtml(c) {
+    return `<div class="candidate"><strong>${esc(c.name)}</strong>${role(c.role)}
+      <ul class="reasons">${reasonList("for", c.for)}${reasonList("against", c.against)}${reasonList("unknown", c.unknown)}</ul></div>`;
+  }
+
+  function reactionHtml(a) {
+    const inner = a.assessable
+      ? a.drugs.map(candidateHtml).join("")
+      : `<div class="none">${esc(a.note)}</div>`;
+    return `<div class="reaction"><h4>${esc(a.reaction)}</h4>${inner}</div>`;
+  }
+
+  function section(title, text) {
+    return text ? `<details><summary>${title}</summary><p>${esc(text)}</p></details>` : "";
+  }
+
+  function drugHtml(d) {
+    const body = d.label_found
+      ? section("Boxed warning", d.boxed_warning) + section("Warnings", d.warnings)
+        + section("Adverse reactions (side effects)", d.adverse_reactions)
+      : `<div class="none">No label found for this drug name.</div>`;
+    const ind = d.indication ? ` <span class="meta">for ${esc(d.indication.toLowerCase())}</span>` : "";
+    return `<div class="drug"><h3>${esc(d.name)}${role(d.role)}${ind}</h3>${body}</div>`;
+  }
+
+  function patientHtml(p) {
+    const age = p.age ? `${esc(p.age)} yrs` : "age unknown";
+    const reactions = p.reactions.map(r => `<span class="tag">${esc(r)}</span>`).join("");
+    return `<div class="patient">
+      <button type="button">
+        <div><strong>Patient ${esc(p.id)}</strong> <span class="meta">${esc(p.sex)}, ${age}</span></div>
+        <div class="reactions">${reactions}</div>
+      </button>
+      <div class="body">
+        <h2>Possible causes, by reaction</h2>
+        ${p.assessment.map(reactionHtml).join("")}
+        <h2>Drugs and labels</h2>
+        ${p.drugs.map(drugHtml).join("")}
+      </div>
+    </div>`;
+  }
+
+  const list = document.getElementById("list");
+  list.innerHTML = PATIENTS.map(patientHtml).join("");
+  list.addEventListener("click", e => {
+    const btn = e.target.closest(".patient > button");
+    if (btn) btn.parentElement.classList.toggle("open");
+  });
+</script>
+</body>
+</html>

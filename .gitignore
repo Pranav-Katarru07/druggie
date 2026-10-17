@@ -1,0 +1,7 @@
+__pycache__/
+report.json
+.playwright-mcp/
+.env
+synthea/
+fhir/
+csv/

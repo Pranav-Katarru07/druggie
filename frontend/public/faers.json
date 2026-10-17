@@ -1,0 +1,1278 @@
+[
+  {
+    "id": "5801206-7",
+    "age": "26",
+    "sex": "Male",
+    "reactions": [
+      "DRUG ADMINISTRATION ERROR",
+      "OVERDOSE"
+    ],
+    "drugs": [
+      {
+        "name": "DURAGESIC-100",
+        "role": "Suspect",
+        "indication": "DRUG ABUSE",
+        "label_found": false,
+        "label_via": null
+      }
+    ],
+    "assessment": [
+      {
+        "reaction": "DRUG ADMINISTRATION ERROR",
+        "assessable": false,
+        "note": "Describes how the drug was used, not a clinical reaction, so no cause is suggested."
+      },
+      {
+        "reaction": "OVERDOSE",
+        "assessable": false,
+        "note": "Describes how the drug was used, not a clinical reaction, so no cause is suggested."
+      }
+    ]
+  },
+  {
+    "id": "10003300",
+    "age": "77",
+    "sex": "Female",
+    "reactions": [
+      "Vomiting",
+      "Diarrhoea",
+      "Arthralgia",
+      "Headache"
+    ],
+    "drugs": [
+      {
+        "name": "BONIVA",
+        "role": "Suspect",
+        "indication": "OSTEOPOROSIS",
+        "label_found": true,
+        "boxed_warning": null,
+        "warnings": "5 WARNINGS AND PRECAUTIONS Upper gastrointestinal Adverse Reactions can occur. Instruct patients to follow dosing instructions and discontinue use if new or worsening symptoms occur. ( 5.1 ) Hypocalcemia may worsen during treatment. Correct hypocalcemia before use. ( 5.2 ) Severe Bone, Joint, and Muscle Pain may occur. Consider discontinuing use if symptoms develop. ( 5.3 ) Osteonecrosis of the Jaw has been reported. ( 5.4 ) Atypical Fractures including Femoral Fractures have been reported. Patients with new thigh or groin pain should be evaluated to rule out a femoral fracture. Risk/benefit of continuing bisphosphonate therapy should be re-evaluated in these patients and interruption of bisphosphonate therapy should be considered. ( 5.5 ) 5.1 Upper Gastrointestinal Adverse Reactions Ibandronate sodium tablets, like other bisphosphonates administered orally, may cause local irritation of the upper gastrointestinal mucosa. Because of these possible irritant effects and a potential for worsening of the underlying disease, caution should be used when ibandronate sodium tablets are given to patients with active upper gastrointestinal problems (such as known Barrett's esophagus, dysphagia, other esophageal diseases, gastritis, duodenitis or ulcers). Esophageal adverse experiences, such as esophagitis, esophageal ulcers and esophageal erosions, occasionally with bleeding and rarely followed by esophageal stricture or perforation, have been reported in patients receiving treatment w",
+        "adverse_reactions": "6 ADVERSE REACTIONS The following clinically significant adverse drug reactions are described elsewhere in the labeling: Upper Gastrointestinal Adverse Reactions [see Warnings and Precautions ( 5.1 )] Hypocalcemia and Mineral Metabolism [see Warnings and Precautions ( 5.2 )] Musculoskeletal [see Warnings and Precautions ( 5.3 )] Jaw Osteonecrosis [see Warnings and Precautions ( 5.4 )] Atypical Fractures Including Femoral Fractures [see Warnings and Precautions ( 5.5 )] Severe Renal Impairment [see Warnings and Precautions ( 5.6 )] The most common adverse reactions (greater than 5%) are back pain, dyspepsia, pain in extremity, diarrhea, headache, and myalgia. ( 6 ) To report SUSPECTED ADVERSE REACTIONS, contact Apotex Corp. at 1-800-706-5575 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. 6.1 Clinical Trials Experience Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in practice. Treatment and Prevention of Postmenopausal Osteoporosis Daily Dosing The safety of ibandronate sodium tablets 2.5 mg once daily in the treatment and prevention of postmenopausal osteoporosis was assessed in 3577 patients aged 41 \u2013 82 years. The duration of the trials was 2 to 3 years, with 1134 patients exposed to placebo and 1140 exposed to ibandronate sodium tablets 2.5 mg. Patients with pre-existin",
+        "label_via": "ingredient ibandronate, via RxNorm"
+      }
+    ],
+    "assessment": [
+      {
+        "reaction": "Vomiting",
+        "assessable": true,
+        "drugs": [
+          {
+            "name": "BONIVA",
+            "role": "Suspect",
+            "for": [
+              {
+                "text": "The label (found by ingredient ibandronate, via RxNorm) lists this reaction under Adverse reactions.",
+                "section": "Adverse reactions",
+                "quote": "\u2026 as a Whole Back Pain 12 14 Pain in Extremity 6 8 Asthenia 2 4 Allergic Reaction 2 3 Digestive System Dyspepsia 10 12 Diarrhea 5 7 Tooth Disorder 2 4 Vomiting 2 3 Gastritis 2 2 Musculoskeletal System Myalgia 5 6 Joint Disorder 3 4 Arthritis 3 3 Nervous System Headache 6 7 Dizziness 3 4 Vertigo 3 3 R\u2026"
+              },
+              {
+                "text": "The reporter marked this drug as a suspect."
+              }
+            ],
+            "against": [],
+            "unknown": [
+              {
+                "text": "What happened when the drug was stopped is not reported."
+              },
+              {
+                "text": "Whether the reaction came back on re-exposure is not reported."
+              },
+              {
+                "text": "Timing can't be checked: the report has no reaction start date (drug started 20130913)."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "reaction": "Diarrhoea",
+        "assessable": true,
+        "drugs": [
+          {
+            "name": "BONIVA",
+            "role": "Suspect",
+            "for": [
+              {
+                "text": "The label (found by ingredient ibandronate, via RxNorm) lists this reaction under Adverse reactions.",
+                "section": "Adverse reactions",
+                "quote": "\u2026al Impairment [see Warnings and Precautions ( 5.6 )] The most common adverse reactions (greater than 5%) are back pain, dyspepsia, pain in extremity, diarrhea, headache, and myalgia."
+              },
+              {
+                "text": "The reporter marked this drug as a suspect."
+              }
+            ],
+            "against": [],
+            "unknown": [
+              {
+                "text": "What happened when the drug was stopped is not reported."
+              },
+              {
+                "text": "Whether the reaction came back on re-exposure is not reported."
+              },
+              {
+                "text": "Timing can't be checked: the report has no reaction start date (drug started 20130913)."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "reaction": "Arthralgia",
+        "assessable": true,
+        "drugs": [
+          {
+            "name": "BONIVA",
+            "role": "Suspect",
+            "for": [
+              {
+                "text": "The label (found by ingredient ibandronate, via RxNorm) lists this reaction under Adverse reactions.",
+                "section": "Adverse reactions",
+                "quote": "14%), arthralgia (14% vs."
+              },
+              {
+                "text": "The reporter marked this drug as a suspect."
+              }
+            ],
+            "against": [],
+            "unknown": [
+              {
+                "text": "What happened when the drug was stopped is not reported."
+              },
+              {
+                "text": "Whether the reaction came back on re-exposure is not reported."
+              },
+              {
+                "text": "Timing can't be checked: the report has no reaction start date (drug started 20130913)."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "reaction": "Headache",
+        "assessable": true,
+        "drugs": [
+          {
+            "name": "BONIVA",
+            "role": "Suspect",
+            "for": [
+              {
+                "text": "The label (found by ingredient ibandronate, via RxNorm) lists this reaction under Adverse reactions.",
+                "section": "Adverse reactions",
+                "quote": "\u2026ent [see Warnings and Precautions ( 5.6 )] The most common adverse reactions (greater than 5%) are back pain, dyspepsia, pain in extremity, diarrhea, headache, and myalgia."
+              },
+              {
+                "text": "The reporter marked this drug as a suspect."
+              }
+            ],
+            "against": [],
+            "unknown": [
+              {
+                "text": "What happened when the drug was stopped is not reported."
+              },
+              {
+                "text": "Whether the reaction came back on re-exposure is not reported."
+              },
+              {
+                "text": "Timing can't be checked: the report has no reaction start date (drug started 20130913)."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "10003301",
+    "age": null,
+    "sex": "Female",
+    "reactions": [
+      "Dyspepsia",
+      "Renal impairment"
+    ],
+    "drugs": [
+      {
+        "name": "IBUPROFEN",
+        "role": "Suspect",
+        "indication": "PRODUCT USED FOR UNKNOWN INDICATION",
+        "label_found": true,
+        "boxed_warning": null,
+        "warnings": "Warnings Allergy alert: Ibuprofen may cause a severe allergic reaction, especially in people allergic to aspirin. Symptoms may include: rash facial swelling asthma (wheezing) hives skin reddening shock blisters If an allergic reaction occurs, stop use and seek medical help right away. Stomach bleeding warning: This product contains an NSAID, which may cause severe stomach bleeding. The chance is higher if you: take more or for a longer time than directed take a blood thinning (anticoagulant) or steroid drug have had stomach ulcers or bleeding problems have 3 or more alcoholic drinks every day while using this product are age 60 or older take other drugs containing prescription or nonprescription NSAIDs [aspirin, ibuprofen, naproxen, or others] Heart attack and stroke warning: NSAIDs, except aspirin, increase the risk of heart attack, heart failure, and stroke. These can be fatal. The risk is higher if you use more than directed or for longer than directed. Do not use if you have ever had an allergic reaction to any other pain reliever/fever reducer right before or after heart surgery Ask a doctor before use if stomach bleeding warning applies to you you have a history of stomach problems, such as heartburn you have high blood pressure, heart disease, liver cirrhosis, kidney disease, asthma, or had a stroke you are taking a diuretic you have problems or serious side effects from taking pain relievers or fever reducers Ask a doctor or pharmacist before use if you are under a do",
+        "adverse_reactions": null,
+        "label_via": null
+      }
+    ],
+    "assessment": [
+      {
+        "reaction": "Dyspepsia",
+        "assessable": true,
+        "drugs": [
+          {
+            "name": "IBUPROFEN",
+            "role": "Suspect",
+            "for": [
+              {
+                "text": "The label lists this reaction under Warnings.",
+                "section": "Warnings",
+                "quote": "\u2026ight before or after heart surgery Ask a doctor before use if stomach bleeding warning applies to you you have a history of stomach problems, such as heartburn you have high blood pressure, heart disease, liver cirrhosis, kidney disease, asthma, or had a stroke you are taking a diuretic you have pro\u2026"
+              },
+              {
+                "text": "The reporter marked this drug as a suspect."
+              }
+            ],
+            "against": [],
+            "unknown": [
+              {
+                "text": "What happened when the drug was stopped is not reported."
+              },
+              {
+                "text": "Whether the reaction came back on re-exposure is not reported."
+              },
+              {
+                "text": "Timing can't be checked: the report has no reaction start date."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "reaction": "Renal impairment",
+        "assessable": true,
+        "drugs": [
+          {
+            "name": "IBUPROFEN",
+            "role": "Suspect",
+            "for": [
+              {
+                "text": "The label lists this reaction under Warnings.",
+                "section": "Warnings",
+                "quote": "\u2026eeding warning applies to you you have a history of stomach problems, such as heartburn you have high blood pressure, heart disease, liver cirrhosis, kidney disease, asthma, or had a stroke you are taking a diuretic you have problems or serious side effects from taking pain relievers or fever reduce\u2026"
+              },
+              {
+                "text": "The reporter marked this drug as a suspect."
+              }
+            ],
+            "against": [],
+            "unknown": [
+              {
+                "text": "What happened when the drug was stopped is not reported."
+              },
+              {
+                "text": "Whether the reaction came back on re-exposure is not reported."
+              },
+              {
+                "text": "Timing can't be checked: the report has no reaction start date."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "10003302",
+    "age": null,
+    "sex": "Male",
+    "reactions": [
+      "Drug ineffective"
+    ],
+    "drugs": [
+      {
+        "name": "LYRICA",
+        "role": "Suspect",
+        "indication": null,
+        "label_found": true,
+        "boxed_warning": null,
+        "warnings": "5 WARNINGS AND PRECAUTIONS \u2022 Angioedema (e.g., swelling of the throat, head and neck) can occur, and may be associated with life-threatening respiratory compromise requiring emergency treatment. Discontinue LYRICA immediately in these cases. ( 5.1 ) \u2022 Hypersensitivity reactions (e.g., hives, dyspnea, and wheezing) can occur. Discontinue LYRICA immediately in these patients. ( 5.2 ) \u2022 Antiepileptic drugs, including LYRICA, increase the risk of suicidal thoughts or behavior. ( 5.3 ) \u2022 Respiratory depression: May occur with LYRICA, when used with concomitant CNS depressants or in the setting of underlying respiratory impairment. Monitor patients and adjust dosage as appropriate. ( 5.4 ) \u2022 LYRICA may cause dizziness and somnolence and impair patients' ability to drive or operate machinery. ( 5.5 ) \u2022 Increased seizure frequency or other adverse reactions may occur if LYRICA is rapidly discontinued. Withdraw LYRICA gradually over a minimum of 1 week. ( 5.6 ) \u2022 LYRICA may cause peripheral edema. Exercise caution when co-administering LYRICA and thiazolidinedione antidiabetic agents. ( 5.7 ) 5.1 Angioedema There have been postmarketing reports of angioedema in patients during initial and chronic treatment with LYRICA. Specific symptoms included swelling of the face, mouth (tongue, lips, and gums), and neck (throat and larynx). There were reports of life-threatening angioedema with respiratory compromise requiring emergency treatment. Discontinue LYRICA immediately in patients with th",
+        "adverse_reactions": "6 ADVERSE REACTIONS The following serious adverse reactions are described elsewhere in the labeling: \u2022 Angioedema [see Warnings and Precautions (5.1) ] \u2022 Hypersensitivity [see Warnings and Precautions (5.2) ] \u2022 Suicidal Behavior and Ideation [see Warnings and Precautions (5.3) ] \u2022 Respiratory Depression [see Warnings and Precautions (5.4) ] \u2022 Dizziness and Somnolence [see Warnings and Precautions (5.5) ] \u2022 Increased Risk of Adverse Reactions with Abrupt or Rapid Discontinuation [see Warnings and Precautions (5.6) ] \u2022 Peripheral Edema [see Warnings and Precautions (5.7) ] \u2022 Weight Gain [see Warnings and Precautions (5.8) ] \u2022 Tumorigenic Potential [see Warnings and Precautions (5.9) ] \u2022 Ophthalmological Effects [see Warnings and Precautions (5.10) ] \u2022 Creatine Kinase Elevations [see Warnings and Precautions (5.11) ] \u2022 Decreased Platelet Count [see Warnings and Precautions (5.12) ] \u2022 PR Interval Prolongation [see Warnings and Precautions (5.13) ] Most common adverse reactions (greater than or equal to 5% and twice placebo) in adults are dizziness, somnolence, dry mouth, edema, blurred vision, weight gain, and thinking abnormal (primarily difficulty with concentration/attention). ( 6.1 ) Most common adverse reactions (greater than or equal to 5% and twice placebo) in pediatric patients for the treatment of partial-onset seizures are increased weight and increased appetite. ( 6.1 ) To report SUSPECTED ADVERSE REACTIONS, contact Pfizer Inc. at 1-800-438-1985 or FDA at 1-800-FDA-108",
+        "label_via": null
+      }
+    ],
+    "assessment": [
+      {
+        "reaction": "Drug ineffective",
+        "assessable": false,
+        "note": "Describes how the drug was used, not a clinical reaction, so no cause is suggested."
+      }
+    ]
+  },
+  {
+    "id": "10003304",
+    "age": null,
+    "sex": "Female",
+    "reactions": [
+      "Drug hypersensitivity"
+    ],
+    "drugs": [
+      {
+        "name": "DOXYCYCLINE HYCLATE",
+        "role": "Suspect",
+        "indication": null,
+        "label_found": true,
+        "boxed_warning": null,
+        "warnings": "WARNINGS The use of drugs of the tetracycline class during tooth development (last half of pregnancy, infancy and childhood to the age of 8 years) may cause permanent discoloration of the teeth (yellow-gray-brown). This adverse reaction is more common during long-term use of the drugs, but it has been observed following repeated short-term courses. Enamel hypoplasia has also been reported. Use doxycycline in pediatric patients 8 years of age or less only when the potential benefits are expected to outweigh the risks in severe or life-threatening conditions (e.g., anthrax, Rocky Mountain spotted fever), particularly when there are no alternative therapies. Clostridium difficile associated diarrhea (CDAD) has been reported with use of nearly all antibacterial agents, including doxycycline, and may range in severity from mild diarrhea to fatal colitis. Treatment with antibacterial agents alters the normal flora of the colon leading to overgrowth of C. difficile . C. difficile produces toxins A and B which contribute to the development of CDAD. Hypertoxin producing strains of C. difficile cause increased morbidity and mortality, as these infections can be refractory to antimicrobial therapy and may require colectomy. CDAD must be considered in all patients who present with diarrhea following the use of antibacterial drugs. Careful medical history is necessary since CDAD has been reported to occur over two months after the administration of antibacterial agents. If CDAD is suspect",
+        "adverse_reactions": "ADVERSE REACTIONS Due to oral doxycycline's virtually complete absorption, side effects of the lower bowel, particularly diarrhea, have been infrequent. The following adverse reactions have been observed in patients receiving tetracyclines: Gastrointestinal: anorexia, nausea, vomiting, diarrhea, glossitis, dysphagia, enterocolitis, inflammatory lesions (with monilial overgrowth) in the anogenital region, and pancreatitis. Hepatotoxicity has been reported rarely. These reactions have been caused by both the oral and parenteral administration of tetracyclines. Superficial discoloration of the adult permanent dentition, reversible upon drug discontinuation and professional dental cleaning has been reported. Permanent tooth discoloration and enamel hypoplasia may occur with drugs of the tetracycline class when used during tooth development. (See WARNINGS .) Rare instances of esophagitis and esophageal ulcerations have been reported in patients receiving capsule and tablet forms of the drugs in the tetracycline class. Most of these patients took medications immediately before going to bed. (See DOSAGE AND ADMINISTRATION .) Skin: toxic epidermal necrolysis, Stevens-Johnson syndrome, erythema multiforme, skin hyperpigmentation, maculopapular and erythematous rashes. Exfoliative dermatitis has been reported but is uncommon. Photosensitivity is discussed above. (See WARNINGS .) Renal toxicity: Rise in BUN has been reported and is apparently dose related. (See WARNINGS .) Immune: Hyper",
+        "label_via": null
+      },
+      {
+        "name": "TRAMADOL HYDROCHLORIDE",
+        "role": "Suspect",
+        "indication": null,
+        "label_found": true,
+        "boxed_warning": "WARNING: SERIOUS AND LIFE-THREATENING RISKS FROM USE OF TRAMADOL HYDROCHLORIDE EXTENDED-RELEASE TABLETS Addiction, Abuse, and Misuse Because the use of tramadol hydrochloride extended-release tablets exposes patients and other users to the risks of opioid addiction, abuse, and misuse, which can lead to overdose and death, assess each patient\u2019s risk prior to prescribing and reassess all patients regularly for the development of these behaviors and conditions [see Warnings and Precautions (5.1)] . Life-Threatening Respiratory Depression Serious, life-threatening, or fatal respiratory depression may occur with use of tramadol hydrochloride extended-release tablets , especially during initiation or following a dosage increase. To reduce the risk of respiratory depression, proper dosing and titration of tramadol hydrochloride extended-release tablets are essential [see Warnings and Precautions (5.2)]. Instruct patients to swallow tramadol hydrochloride extended-release tablets whole to avoid exposure to a potentially fatal dose of tramadol [see Warnings and Precautions (5.2)]. Accidental Ingestion Accidental ingestion of even one dose of tramadol hydrochloride extended-release tablets , especially by children, can result in a fatal overdose of tramadol [see Warnings and Precautions (5.2)] . Risks From Concomitant Use With Benzodiazepines Or Other CNS Depressants Concomitant use of opioids with benzodiazepines or other central nervous system (CNS) depressants, including alcohol, ma",
+        "warnings": "5 WARNINGS AND PRECAUTIONS Opioid Induced Hyperalgesia (OIH) and Allodynia: Opioid-Induced Hyperalgesia (OIH) occurs when an opioid analgesic paradoxically causes an increase in pain, or an increase in sensitivity to pain. If OIH is suspected, carefully consider appropriately decreasing the dose of the current opioid analgesic, or opioid rotation (5.8) Serotonin Syndrome : Potentially life-threatening condition could result from concomitant serotonergic drug administration. Discontinue tramadol hydrochloride extended-release tablets if serotonin syndrome is suspected. (5.9) Increased Risk of Seizures : Present within recommended dosage range. Risk is increased with higher than recommended doses and concomitant use of SSRIs, SNRIs, anorectics, tricyclic antidepressants and other tricyclic compounds, other opioids, MAOIs, neuroleptics, other drugs that reduce seizure threshold, in patients with epilepsy or at risk for seizures. (5.10, 7) Risk of Suicide : Do not use tramadol hydrochloride extended-release tablets in suicidal or addiction-prone patients. Use with caution in those taking tranquilizers, antidepressants or abuse alcohol. (5.11) Life-Threatening Respiratory Depression in Patients with Chronic Pulmonary Disease or in Elderly, Cachectic, or Debilitated Patients: Regularly evaluate closely, particularly during initiation and titration. (5.12) Adrenal Insufficiency : If diagnosed, treat with physiologic replacement of corticosteroids, and wean patient off of the opioid.",
+        "adverse_reactions": "6 ADVERSE REACTIONS The following serious or otherwise important adverse reactions are described in greater detail, in other sections: Addiction, Abuse, and Misuse [see Warnings and Precautions (5.1)] Life-Threatening Respiratory Depression [see Warnings and Precautions (5.2)] Ultra-Rapid Metabolism of Tramadol and Other Risk Factors for Life-Threatening Respiratory Depression in Children [see Warnings and Precautions (5.6)] Neonatal Opioid Withdrawal Syndrome [see Warnings and Precautions (5.4)] Interactions with Benzodiazepines and Other CNS Depressants [see Warnings and Precautions (5.3)] Opioid-Induced Hyperalgesia and Allodynia [See Warnings and Precautions (5.8)] Serotonin Syndrome [see Warnings and Precautions (5.9)] Seizures [see Warnings and Precautions (5.10)] Suicide [see Warnings and Precautions (5.11)] Adrenal Insufficiency [see Warnings and Precautions (5.13)] Severe Hypotension [see Warnings and Precautions (5.14)] Gastrointestinal Adverse Reactions [see Warnings and Precautions (5.16)] Hypersensitivity Reactions [see Warnings and Precautions (5.17)] Withdrawal [see Warnings and Precautions (5.18)] Most common adverse reactions (\u226510% and \u22652 x placebo rate): Dizziness, constipation, nausea, headache, somnolence, flushing, pruritus, vomiting, insomnia, dry mouth. ( 6.1 ) To report SUSPECTED ADVERSE REACTIONS, contact Sun Pharmaceutical Industries, Inc. at 1-800-818-4555 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. 6.1 Clinical Trials Experience Because clini",
+        "label_via": null
+      },
+      {
+        "name": "OXYCONTIN",
+        "role": "Suspect",
+        "indication": null,
+        "label_found": true,
+        "boxed_warning": "WARNING: SERIOUS AND LIFE-THREATENING RISKS FROM USE OF OXYCONTIN Addiction, Abuse, and Misuse Because the use of OXYCONTIN exposes patients and other users to the risks of opioid addiction, abuse, and misuse, which can lead to overdose and death, assess each patient's risk prior to prescribing and reassess all patients regularly for the development of these behaviors and conditions [see Warnings and Precautions (5.1) ]. Life-Threatening Respiratory Depression Serious, life-threatening, or fatal respiratory depression may occur with use of OXYCONTIN, especially during initiation or following a dosage increase . To reduce the risk of respiratory depression, proper dosing and titration of OXYCONTIN are essential. Instruct patients to swallow OXYCONTIN tablets whole; crushing, chewing, or dissolving OXYCONTIN tablets can cause rapid release and absorption of a potentially fatal dose of oxycodone [see Warnings and Precautions (5.2) ] . Accidental Ingestion Accidental ingestion of even one dose of OXYCONTIN, especially by children, can result in a fatal overdose of oxycodone [see Warnings and Precautions (5.2) ]. Risks From Concomitant Use With Benzodiazepines Or Other CNS Depressants Concomitant use of opioids with benzodiazepines or other central nervous system (CNS) depressants, including alcohol, may result in profound sedation, respiratory depression, coma, and death. Reserve concomitant prescribing of OXYCONTIN and benzodiazepines or other CNS depressants for use in patients",
+        "warnings": "5 WARNINGS AND PRECAUTIONS Opioid-Induced Hyperalgesia and Allodynia: Opioid-Induced Hyperalgesia (OIH) occurs when an opioid analgesic paradoxically causes an increase in pain, or an increase in sensitivity to pain. If OIH is suspected, carefully consider appropriately decreasing the dose of the current opioid analgesic, or opioid rotation. ( 5.7 ) Life-Threatening Respiratory Depression in Patients with Chronic Pulmonary Disease or in Elderly, Cachectic, or Debilitated Patients: Regularly evaluate, particularly during initiation and titration. ( 5.8 ) Adrenal Insufficiency : If diagnosed, treat with physiologic replacement of corticosteroids, and wean patient off of the opioid. ( 5.9 ) Severe Hypotension : Regularly evaluate during dosage initiation and titration. Avoid use of OXYCONTIN in patients with circulatory shock. ( 5.10 ) Risks of Use in Patients with Increased Intracranial Pressure, Brain Tumors, Head Injury, or Impaired Consciousness : Monitor for sedation and respiratory depression. Avoid use of OXYCONTIN in patients with impaired consciousness or coma. ( 5.11 ) Risk of Obstruction in Patients who have Difficulty Swallowing or have Underlying GI Disorders that may Predispose them to Obstruction: Consider use of an alternative analgesic. ( 5.12 ) 5.1 Addiction, Abuse, and Misuse OXYCONTIN contains oxycodone, a Schedule II controlled substance. As an opioid, OXYCONTIN exposes users to the risks of addiction, abuse, and misuse. Although the risk of addiction in any",
+        "adverse_reactions": "6 ADVERSE REACTIONS The following serious adverse reactions are described elsewhere in the labeling: Addiction, Abuse, and Misuse [see Warnings and Precautions (5.1) ] Life-Threatening Respiratory Depression [see Warnings and Precautions (5.2) ] Interactions With Benzodiazepines and Other CNS Depressants [see Warnings and Precautions (5.3) ] Neonatal Opioid Withdrawal Syndrome [see Warnings and Precautions (5.4) ] Opioid-Induced Hyperalgesia and Allodynia [see Warnings and Precautions (5.7) ] Adrenal Insufficiency [see Warnings and Precautions (5.9) ] Severe Hypotension [see Warnings and Precautions (5.10) ] Gastrointestinal Adverse Reactions [see Warnings and Precautions (5.12 , 5.13) ] Seizures [see Warnings and Precautions (5.14) ] Withdrawal [see Warnings and Precautions (5.15) ] Most common adverse reactions (incidence >5%) were constipation, nausea, somnolence, dizziness, vomiting, pruritus, headache, dry mouth, asthenia, and sweating. ( 6.1 ) To report SUSPECTED ADVERSE REACTIONS, contact Knoa Pharma LLC at 1-888-726-7535 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. 6.1 Clinical Trial Experience Adult Clinical Trial Experience Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in practice. The safety of OXYCONTIN was evaluated in double-blind clinical trials involving",
+        "label_via": null
+      },
+      {
+        "name": "TALWIN",
+        "role": "Suspect",
+        "indication": null,
+        "label_found": false,
+        "label_via": null
+      },
+      {
+        "name": "CODEINE",
+        "role": "Suspect",
+        "indication": null,
+        "label_found": true,
+        "boxed_warning": "WARNING: SERIOUS AND LIFE-THREATENING RISKS FROM USE OF CODEINE SULFATE TABLETS Addiction, Abuse, and Misuse Because the use of Codeine Sulfate Tablets exposes patients and other users to the risks of opioid addiction, abuse, and misuse, which can lead to overdose and death, assess each patient\u2019s risk prior to prescribing and reassess all patients regularly for the development of these behaviors and conditions [see Warnings and Precautions ( 5.1 ), Dosage and Administration ( 2.1 )] . Life-Threatening Respiratory Depression Serious, life-threatening, or fatal respiratory depression may occur with use of Codeine Sulfate Tablets, especially during initiation or following a dosage increase. To reduce the risk of respiratory depression, proper dosing and titration of Codeine Sulfate Tablets are essential [see Warnings and Precautions ( 5.2 )] . Accidental Ingestion Accidental ingestion of even one dose of Codeine Sulfate Tablets, especially by children, can result in a fatal overdose of codeine [see Warnings and Precautions ( 5.2 )] . Risks From Concomitant Use With Benzodiazepines Or Other CNS Depressants Concomitant use of opioids with benzodiazepines or other central nervous system (CNS) depressants, including alcohol, may result in profound sedation, respiratory depression, coma, and death. Reserve concomitant prescribing of Codeine Sulfate Tablets and benzodiazepines or other CNS depressants for use in patients for whom alternative treatment options are inadequate [ see Warn",
+        "warnings": "5 WARNINGS AND PRECAUTIONS \u2022 Opioid-Induced Hyperalgesia and Allodynia: Opioid-Induced Hyperalgesia (OIH) occurs when an opioid analgesic paradoxically causes an increase in pain, or an increase in sensitivity to pain. If OIH is suspected, carefully consider appropriately decreasing the dose of the current opioid analgesic, or opioid rotation. ( 5.8 ) \u2022 Life-Threatening Respiratory Depression in Patients with Chronic Pulmonary Disease or in Elderly, Cachectic, or Debilitated Patients : Regularly evaluate closely, particularly during initiation and titration. ( 5.9 ) \u2022 Adrenal Insufficiency : If diagnosed, treat with physiologic replacement of corticosteroids, and wean patient off of the opioid. ( 5.11 ) \u2022 Severe Hypotension : Regularly evaluate during dosage initiation and titration. Avoid use of Codeine Sulfate Tablets in patients with circulatory shock. ( 5.12 ) \u2022 Risks of Use in Patients with Increased Intracranial Pressure, Brain Tumors, Head Injury, or Impaired Consciousness : Monitor for sedation and respiratory depression. Avoid use of Codeine Sulfate Tablets in patients with impaired consciousness or coma. ( 5.13 ) 5.1 Addiction, Abuse, and Misuse Codeine Sulfate Tablets contain codeine, a Schedule II controlled substance. As an opioid, Codeine Sulfate Tablets exposes users to the risks of addiction, abuse, and misuse [see Drug Abuse and Dependence ( 9 )]. Although the risk of addiction in any individual is unknown, it can occur in patients appropriately prescribed Co",
+        "adverse_reactions": "6 ADVERSE REACTIONS The following serious adverse reactions are described, or described in greater detail, in other sections: \u2022 Addiction, Abuse, and Misuse [see Warnings and Precautions ( 5.1 )] \u2022 Life-Threatening Respiratory Depression [see Warnings and Precautions ( 5.2 )] \u2022 Interactions with Benzodiazepines and Other CNS Depressants [see Warnings and Precautions ( 5.3 )] \u2022 Neonatal Opioid Withdrawal Syndrome [see Warnings and Precautions ( 5.4 )] \u2022 Ultra-Rapid Metabolism of Codeine and Other Risk Factors for Life-Threatening Respiratory Depression in Children [see Warnings and Precautions ( 5.6 )] \u2022 Opioid-Induced Hyperalgesia and Allodynia [see Warnings and Precautions ( 5.8 )] \u2022 Adrenal Insufficiency [see Warnings and Precautions ( 5.11 )] \u2022 Severe Hypotension [see Warnings and Precautions ( 5.12 )] \u2022 Gastrointestinal Adverse Reactions [see Warnings and Precautions ( 5.14 )] \u2022 Seizures [see Warnings and Precautions ( 5.15 )] \u2022 Withdrawal [see Warnings and Precautions ( 5.16 )] The following adverse reactions associated with the use of codeine were identified in clinical studies or postmarketing reports. Because some of these reactions were reported voluntarily from a population of uncertain size, it is not always possible to reliably estimate their frequency or establish a causal relationship to drug exposure. Serious adverse reactions associated with codeine were respiratory depression and, to a lesser degree, circulatory depression, respiratory arrest, shock, and card",
+        "label_via": null
+      },
+      {
+        "name": "IODINE",
+        "role": "Suspect",
+        "indication": null,
+        "label_found": true,
+        "boxed_warning": null,
+        "warnings": "Warnings: Do not use if allergic to iodine For external use only Do not use in eyes Avoid pooling beneath patient. Prolonged exposure to wet solution may cause skiin irritation.",
+        "adverse_reactions": null,
+        "label_via": null
+      },
+      {
+        "name": "ASPIRIN",
+        "role": "Suspect",
+        "indication": null,
+        "label_found": true,
+        "boxed_warning": null,
+        "warnings": "Warnings Reye's syndrome : Children and teenagers who have or are recovering from chicken pox or flu-like symptoms should not use this product. When using this product, if changes in behavior with nausea and vomiting occur, consult a doctor because these symptoms could be an early sign of Reye's syndrome, a rare but serious illness. Allergy alert : Aspirin may cause a severe allergic reaction, which may include: hives facial swelling shock asthma (wheezing) Stomach bleeding warning: This product contains an NSAID, which may cause severe stomach bleeding. The chance is higher if you: are age 60 or older have had stomach ulcers or bleeding problems take a blood thinning (anticoagulant) or steroid drug take other drugs containing prescription or nonprescription NSAIDs [aspirin, ibuprofen, naproxen, or others] have 3 or more alcoholic drinks every day while using this product take more or for a longer time than directed Do not use if you are allergic to aspirin or any other pain reliever/fever reducer. if you have ever had an allergic reaction to his product or any of its ingredients Ask a doctor before use if stomach bleeding warning applies to you you have a history of stomach problems, such as heartburn you have high blood pressure, heart disease, liver cirrhosis, or kidney disease you are taking a diuretic you have asthma Ask a doctor or pharmacist before use if you are taking a prescription drug for gout diabetes arthritis Stop use and ask a doctor if an allergic reaction oc",
+        "adverse_reactions": null,
+        "label_via": null
+      },
+      {
+        "name": "LORTAB",
+        "role": "Suspect",
+        "indication": null,
+        "label_found": false,
+        "label_via": null
+      },
+      {
+        "name": "FIORINAL",
+        "role": "Suspect",
+        "indication": null,
+        "label_found": false,
+        "label_via": null
+      }
+    ],
+    "assessment": [
+      {
+        "reaction": "Drug hypersensitivity",
+        "assessable": true,
+        "drugs": [
+          {
+            "name": "DOXYCYCLINE HYCLATE",
+            "role": "Suspect",
+            "for": [
+              {
+                "text": "The label lists this reaction under Adverse reactions.",
+                "section": "Adverse reactions",
+                "quote": "\u2026g urticaria, angioneurotic edema, anaphylaxis, anaphylactoid purpura, serum sickness, pericarditis, exacerbation of systemic lupus erythematosus, and drug reaction with eosinophilia and systemic symptoms (DRESS), and Jarisch-Herxheimer reaction has been reported in the setting of spirochete infectio\u2026"
+              },
+              {
+                "text": "The reporter marked this drug as a suspect."
+              }
+            ],
+            "against": [
+              {
+                "text": "Other drugs in this report also list this reaction: TRAMADOL HYDROCHLORIDE, CODEINE, ASPIRIN."
+              }
+            ],
+            "unknown": [
+              {
+                "text": "What happened when the drug was stopped is not useful here (drug unknown)."
+              },
+              {
+                "text": "Whether the reaction came back on re-exposure is not reported."
+              },
+              {
+                "text": "Timing can't be checked: the report has no reaction start date."
+              }
+            ]
+          },
+          {
+            "name": "TRAMADOL HYDROCHLORIDE",
+            "role": "Suspect",
+            "for": [
+              {
+                "text": "The label lists this reaction under Warnings and precautions.",
+                "section": "Warnings and precautions",
+                "quote": "5.17 Anaphylaxis and Other Hypersensitivity Reactions Serious and rarely fatal hypersensitive reactions have been reported in patients receiving therapy with tramadol."
+              },
+              {
+                "text": "The reporter marked this drug as a suspect."
+              }
+            ],
+            "against": [
+              {
+                "text": "Other drugs in this report also list this reaction: DOXYCYCLINE HYCLATE, CODEINE, ASPIRIN."
+              }
+            ],
+            "unknown": [
+              {
+                "text": "What happened when the drug was stopped is not useful here (drug unknown)."
+              },
+              {
+                "text": "Whether the reaction came back on re-exposure is not reported."
+              },
+              {
+                "text": "Timing can't be checked: the report has no reaction start date."
+              }
+            ]
+          },
+          {
+            "name": "OXYCONTIN",
+            "role": "Suspect",
+            "for": [
+              {
+                "text": "The reporter marked this drug as a suspect."
+              }
+            ],
+            "against": [
+              {
+                "text": "The reaction is not mentioned in the label sections checked."
+              },
+              {
+                "text": "Other drugs in this report also list this reaction: DOXYCYCLINE HYCLATE, TRAMADOL HYDROCHLORIDE, CODEINE, ASPIRIN."
+              }
+            ],
+            "unknown": [
+              {
+                "text": "What happened when the drug was stopped is not useful here (drug unknown)."
+              },
+              {
+                "text": "Whether the reaction came back on re-exposure is not reported."
+              },
+              {
+                "text": "Timing can't be checked: the report has no reaction start date."
+              }
+            ]
+          },
+          {
+            "name": "TALWIN",
+            "role": "Suspect",
+            "for": [
+              {
+                "text": "The reporter marked this drug as a suspect."
+              }
+            ],
+            "against": [
+              {
+                "text": "Other drugs in this report also list this reaction: DOXYCYCLINE HYCLATE, TRAMADOL HYDROCHLORIDE, CODEINE, ASPIRIN."
+              }
+            ],
+            "unknown": [
+              {
+                "text": "No label found, so it can't be checked whether this reaction is known for this drug."
+              },
+              {
+                "text": "What happened when the drug was stopped is not useful here (drug unknown)."
+              },
+              {
+                "text": "Whether the reaction came back on re-exposure is not reported."
+              },
+              {
+                "text": "Timing can't be checked: the report has no reaction start date."
+              }
+            ]
+          },
+          {
+            "name": "CODEINE",
+            "role": "Suspect",
+            "for": [
+              {
+                "text": "The label lists this reaction under Adverse reactions.",
+                "section": "Adverse reactions",
+                "quote": "Other adverse reactions included allergic reactions, euphoria, dysphoria, abdominal pain, and pruritis."
+              },
+              {
+                "text": "The reporter marked this drug as a suspect."
+              }
+            ],
+            "against": [
+              {
+                "text": "Other drugs in this report also list this reaction: DOXYCYCLINE HYCLATE, TRAMADOL HYDROCHLORIDE, ASPIRIN."
+              }
+            ],
+            "unknown": [
+              {
+                "text": "What happened when the drug was stopped is not useful here (drug unknown)."
+              },
+              {
+                "text": "Whether the reaction came back on re-exposure is not reported."
+              },
+              {
+                "text": "Timing can't be checked: the report has no reaction start date."
+              }
+            ]
+          },
+          {
+            "name": "IODINE",
+            "role": "Suspect",
+            "for": [
+              {
+                "text": "The reporter marked this drug as a suspect."
+              }
+            ],
+            "against": [
+              {
+                "text": "The reaction is not mentioned in the label sections checked."
+              },
+              {
+                "text": "Other drugs in this report also list this reaction: DOXYCYCLINE HYCLATE, TRAMADOL HYDROCHLORIDE, CODEINE, ASPIRIN."
+              }
+            ],
+            "unknown": [
+              {
+                "text": "What happened when the drug was stopped is not useful here (drug unknown)."
+              },
+              {
+                "text": "Whether the reaction came back on re-exposure is not reported."
+              },
+              {
+                "text": "Timing can't be checked: the report has no reaction start date."
+              }
+            ]
+          },
+          {
+            "name": "ASPIRIN",
+            "role": "Suspect",
+            "for": [
+              {
+                "text": "The label lists this reaction under Warnings.",
+                "section": "Warnings",
+                "quote": "Allergy alert : Aspirin may cause a severe allergic reaction, which may include: hives facial swelling shock asthma (wheezing) Stomach bleeding warning: This product contains an NSAID, which ma\u2026"
+              },
+              {
+                "text": "The reporter marked this drug as a suspect."
+              }
+            ],
+            "against": [
+              {
+                "text": "Other drugs in this report also list this reaction: DOXYCYCLINE HYCLATE, TRAMADOL HYDROCHLORIDE, CODEINE."
+              }
+            ],
+            "unknown": [
+              {
+                "text": "What happened when the drug was stopped is not useful here (drug unknown)."
+              },
+              {
+                "text": "Whether the reaction came back on re-exposure is not reported."
+              },
+              {
+                "text": "Timing can't be checked: the report has no reaction start date."
+              }
+            ]
+          },
+          {
+            "name": "LORTAB",
+            "role": "Suspect",
+            "for": [
+              {
+                "text": "The reporter marked this drug as a suspect."
+              }
+            ],
+            "against": [
+              {
+                "text": "Other drugs in this report also list this reaction: DOXYCYCLINE HYCLATE, TRAMADOL HYDROCHLORIDE, CODEINE, ASPIRIN."
+              }
+            ],
+            "unknown": [
+              {
+                "text": "No label found, so it can't be checked whether this reaction is known for this drug."
+              },
+              {
+                "text": "What happened when the drug was stopped is not useful here (drug unknown)."
+              },
+              {
+                "text": "Whether the reaction came back on re-exposure is not reported."
+              },
+              {
+                "text": "Timing can't be checked: the report has no reaction start date."
+              }
+            ]
+          },
+          {
+            "name": "FIORINAL",
+            "role": "Suspect",
+            "for": [
+              {
+                "text": "The reporter marked this drug as a suspect."
+              }
+            ],
+            "against": [
+              {
+                "text": "Other drugs in this report also list this reaction: DOXYCYCLINE HYCLATE, TRAMADOL HYDROCHLORIDE, CODEINE, ASPIRIN."
+              }
+            ],
+            "unknown": [
+              {
+                "text": "No label found, so it can't be checked whether this reaction is known for this drug."
+              },
+              {
+                "text": "What happened when the drug was stopped is not useful here (drug unknown)."
+              },
+              {
+                "text": "Whether the reaction came back on re-exposure is not reported."
+              },
+              {
+                "text": "Timing can't be checked: the report has no reaction start date."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "10003305",
+    "age": "48",
+    "sex": "Female",
+    "reactions": [
+      "Drug hypersensitivity"
+    ],
+    "drugs": [
+      {
+        "name": "LIPITOR",
+        "role": "Suspect",
+        "indication": null,
+        "label_found": true,
+        "boxed_warning": null,
+        "warnings": "5 WARNINGS AND PRECAUTIONS \u2022 Myopathy and Rhabdomyolysis: Risk factors include age 65 years or greater, uncontrolled hypothyroidism, renal impairment, concomitant use with certain other drugs, and higher LIPITOR dosage. Discontinue LIPITOR if markedly elevated CK levels occur or myopathy is diagnosed or suspected. Temporarily discontinue LIPITOR in patients experiencing an acute or serious condition at high risk of developing renal failure secondary to rhabdomyolysis. Inform patients of the risk of myopathy and rhabdomyolysis when starting or increasing LIPITOR dosage. Instruct patients to promptly report unexplained muscle pain, tenderness, or weakness, particularly if accompanied by malaise or fever ( 2.5 , 5.1 , 7.1 , 8.5 , 8.6 ). \u2022 Immune-Mediated Necrotizing Myopathy (IMNM): Rare reports of IMNM, an autoimmune myopathy, have been reported with statin use. Discontinue LIPITOR if IMNM is suspected ( 5.2 ). \u2022 Hepatic Dysfunction: Increases in serum transaminases have occurred, some persistent. Rare reports of fatal and non-fatal hepatic failure have occurred. Consider testing liver enzymes before initiating therapy and as clinically indicated thereafter. If serious hepatic injury with clinical symptoms and/or hyperbilirubinemia or jaundice occurs, promptly discontinue LIPITOR ( 5.3 ). 5.1 Myopathy and Rhabdomyolysis LIPITOR may cause myopathy (muscle pain, tenderness, or weakness associated with elevated creatine kinase [CK]) and rhabdomyolysis. Acute kidney injury secondar",
+        "adverse_reactions": "6 ADVERSE REACTIONS The following important adverse reactions are described below and elsewhere in the labeling: \u2022 Myopathy and Rhabdomyolysis [see Warnings and Precautions (5.1) ] \u2022 Immune-Mediated Necrotizing Myopathy [see Warnings and Precautions (5.2) ] \u2022 Hepatic Dysfunction [see Warnings and Precautions (5.3) ] \u2022 Increases in HbA1c and Fasting Serum Glucose Levels [see Warnings and Precautions (5.4) ] Most common adverse reactions (incidence \u22655%) are nasopharyngitis, arthralgia, diarrhea, pain in extremity, and urinary tract infection ( 6.1 ). To report SUSPECTED ADVERSE REACTIONS, contact Viatris at 1-877-446-3679 (1-877-4-INFO-RX) or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. 6.1 Clinical Trials Experience Because clinical trials are conducted under widely varying conditions, the adverse reaction rates observed in the clinical trials of a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in practice. In the LIPITOR placebo-controlled clinical trial database of 16,066 patients (8755 LIPITOR vs. 7,311 placebo; age range 10-93 years, 39% female, 91% White, 3% Black or African American, 2% Asian, 4% other) with a median treatment duration of 53 weeks, the most common adverse reactions in patients treated with LIPITOR that led to treatment discontinuation and occurred at a rate greater than placebo were: myalgia (0.7%), diarrhea (0.5%), nausea (0.4%), alanine aminotransferase increase (0.4%), and hepa",
+        "label_via": null
+      },
+      {
+        "name": "LISINOPRIL",
+        "role": "Suspect",
+        "indication": null,
+        "label_found": true,
+        "boxed_warning": "WARNING: FETAL TOXICITY See full prescribing information for complete boxed warning. When pregnancy is detected, discontinue lisinopril and hydrochlorothiazide as soon as possible. Drugs that act directly on the renin-angiotensin system can cause injury and death to the developing fetus. See WARNINGS: Fetal Toxicity .",
+        "warnings": "WARNINGS Lisinopril Anaphylactoid and Possibly Related Reactions: Presumably because angiotensin-converting enzyme inhibitors affect the metabolism of eicosanoids and polypeptides, including endogenous bradykinin, patients receiving ACE inhibitors (including lisinopril and hydrochlorothiazide) may be subject to a variety of adverse reactions, some of them serious. Head and Neck Angioedema: Angioedema of the face, extremities, lips, tongue, glottis and/or larynx has been reported in patients treated with angiotensin-converting enzyme inhibitors, including lisinopril. This may occur at any time during treatment. ACE inhibitors have been associated with a higher rate of angioedema in black than in nonblack patients. Lisinopril and hydrochlorothiazide should be promptly discontinued and the appropriate therapy and monitoring should be provided until complete and sustained resolution of signs and symptoms has occurred. Even in those instances where swelling of only the tongue is involved, without respiratory distress, patients may require prolonged observation since treatment with antihistamines and corticosteroids may not be sufficient. Very rarely, fatalities have been reported due to angioedema associated with laryngeal edema or tongue edema. Patients with involvement of the tongue, glottis or larynx are likely to experience airway obstruction, especially those with a history of airway surgery. Where there is involvement of the tongue, glottis or larynx, likely to cause airway ",
+        "adverse_reactions": "ADVERSE REACTIONS Lisinopril and hydrochlorothiazide have been evaluated for safety in 930 patients, including 100 patients treated for 50 weeks or more. In clinical trials with lisinopril and hydrochlorothiazide no adverse experiences peculiar to this combination drug have been observed. Adverse experiences that have occurred have been limited to those that have been previously reported with lisinopril or hydrochlorothiazide. The most frequent clinical adverse experiences in controlled trials (including open label extensions) with any combination of lisinopril and hydrochlorothiazide were: dizziness (7.5%), headache (5.2%), cough (3.9%), fatigue (3.7%) and orthostatic effects (3.2%), all of which were more common than in placebo-treated patients. Generally, adverse experiences were mild and transient in nature; but see WARNINGS regarding angioedema and excessive hypotension or syncope. Discontinuation of therapy due to adverse effects was required in 4.4 % of patients, principally because of dizziness, cough, fatigue and muscle cramps. Adverse experiences occurring in greater than one percent of patients treated with lisinopril plus hydrochlorothiazide in controlled clinical trials are shown below. Percent of Patients in Controlled Studies Lisinopril - Hydrochlorothiazide ( n = 930 ) Incidence ( discontinuation ) Placebo ( n = 207 ) Incidence Dizziness 7.5 (0.8) 1.9 Headache 5.2 (0.3) 1.9 Cough 3.9 (0.6) 1.0 Fatigue 3.7 (0.4) 1.0 Orthostatic Effects 3.2 (0.1) 1.0 Diarrhea 2.",
+        "label_via": null
+      },
+      {
+        "name": "LOSARTAN POTASSIUM",
+        "role": "Suspect",
+        "indication": null,
+        "label_found": true,
+        "boxed_warning": "WARNING: FETAL TOXICITY When pregnancy is detected, discontinue losartan potassium as soon as possible. Drugs that act directly on the renin-angiotensin system can cause injury and death to the developing fetus [see Warnings and Precautions (5.1) ]. WARNING: FETAL TOXICITY See full prescribing information for complete boxed warning. When pregnancy is detected, discontinue losartan potassium as soon as possible. Drugs that act directly on the renin-angiotensin system can cause injury and death to the developing fetus. (5.1)",
+        "warnings": "5 WARNINGS AND PRECAUTIONS \u2022 Hypotension: Correct volume or salt depletion prior to administration of losartan potassium. (5.2) \u2022 Monitor renal function and potassium in susceptible patients. (5.3 , 5.4) 5.1 Fetal Toxicity Losartan potassium can cause fetal harm when administered to a pregnant woman. Use of drugs that act on the renin-angiotensin system during the second and third trimesters of pregnancy reduces fetal renal function and increases fetal and neonatal morbidity and death. Resulting oligohydramnios can be associated with fetal lung hypoplasia and skeletal deformations. Potential neonatal adverse effects include skull hypoplasia, anuria, hypotension, renal failure, and death. When pregnancy is detected, discontinue losartan potassium as soon as possible [see Use in Specific Populations (8.1) ]. 5.2 Hypotension in Volume- or Salt-Depleted Patients In patients with an activated renin-angiotensin system, such as volume- or salt-depleted patients (e.g., those being treated with high doses of diuretics), symptomatic hypotension may occur after initiation of treatment with losartan potassium. Correct volume or salt depletion prior to administration of losartan potassium [see Dosage and Administration (2.1) ]. 5.3 Renal Function Deterioration Changes in renal function including acute renal failure can be caused by drugs that inhibit the renin angiotensin system and by diuretics. Patients whose renal function may depend in part on the activity of the renin-angiotensin sys",
+        "adverse_reactions": "6 ADVERSE REACTIONS Most common adverse reactions (incidence \u22652% and greater than placebo) are: dizziness, upper respiratory infection, nasal congestion, and back pain. (6.1) To report SUSPECTED ADVERSE REACTIONS, contact Zydus Pharmaceuticals (USA) Inc. at 1-877-993-8779 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. 6.1 Clinical Trials Experience Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in practice. Hypertension Losartan potassium has been evaluated for safety in more than 3300 adult patients treated for essential hypertension and 4058 patients/subjects overall. Over 1200 patients were treated for over 6 months and more than 800 for over one year. Treatment with losartan potassium was well-tolerated with an overall incidence of adverse events similar to that of placebo. In controlled clinical trials, discontinuation of therapy for adverse events occurred in 2.3% of patients treated with losartan potassium and 3.7% of patients given placebo. In 4 clinical trials involving over 1000 patients on various doses (10 to 150 mg) of losartan potassium and over 300 patients given placebo, the adverse events that occurred in \u22652% of patients treated with losartan potassium and more commonly than placebo were: dizziness (3% vs. 2%), upper respiratory infection (8% vs. 7%), nasa",
+        "label_via": null
+      },
+      {
+        "name": "METOPROLOL TARTRATE",
+        "role": "Suspect",
+        "indication": null,
+        "label_found": true,
+        "boxed_warning": null,
+        "warnings": "5 WARNINGS AND PRECAUTIONS \u2022 Abrupt cessation may exacerbate myocardial ischemia. ( 5.1 ) \u2022 Heart Failure: Worsening cardiac failure may occur. ( 5.2 ) \u2022 Bronchospastic Disease: Avoid beta-blockers. ( 5.3 ) \u2022 Pheochromocytoma: Initiate therapy with an alpha blocker. ( 5.4 ) \u2022 Major Surgery: Avoid initiation of high-dose extended-release metoprolol in patients undergoing non-cardiac surgery. Do not routinely withdraw chronic beta-blocker therapy prior to surgery. ( 5.5 , 6.1 ) \u2022 Diabetes: May mask symptoms of hypoglycemia. ( 5.6 ) \u2022 Thyrotoxicosis: Abrupt withdrawal in patients with thyrotoxicosis might precipitate a thyroid storm. ( 5.7 ) \u2022 Peripheral Vascular Disease: Can aggravate symptoms of arterial insufficiency. ( 5.9 ) 5.1 Abrupt Cessation of Therapy Following abrupt cessation of therapy with certain beta-blocking agents, exacerbations of angina pectoris and, in some cases, myocardial infarction have occurred. When discontinuing chronically administered metoprolol tartrate, particularly in patients with ischemic heart disease, gradually reduce the dosage over a period of 1 to 2 weeks and monitor the patient. If angina markedly worsens or acute coronary ischemia develops, promptly reinstate metoprolol tartrate, and take measures appropriate for the management of unstable angina. Warn patients not to interrupt therapy without their physician\u2019s advice. Because coronary artery disease is common and may be unrecognized, avoid abruptly discontinuing metoprolol tartrate in pa",
+        "adverse_reactions": "6 ADVERSE REACTIONS The following adverse reactions are described elsewhere in labeling: Worsening angina or myocardial infarction [see Warnings and Precautions (5)] Worsening heart failure [see Warnings and Precautions (5)]. Worsening AV block [see Contraindications (4)]. \u2022 Most common adverse reactions: tiredness, dizziness, depression, shortness of breath, bradycardia, hypotension, diarrhea, pruritus, rash. ( 6.1 ) To report SUSPECTED ADVERSE REACTIONS, contact Alembic Pharmaceuticals Limited at 1-866-210-9797 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. 6.1 Clinical Trials Experience Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in practice. Hypertension and Angina Most adverse effects have been mild and transient. Central Nervous System: Tiredness and dizziness have occurred in about 10% of patients. Depression has been reported in about 5 of 100 patients. Mental confusion and short-term memory loss have been reported. Headache, nightmares, and insomnia have also been reported. Cardiovascular: Shortness of breath and bradycardia have occurred in approximately 3% of patients. Cold extremities; arterial insufficiency, usually of the Raynaud type; palpitations; heart failure exacerbations; peripheral edema; and hypotension have been reported in about 1% of patients. G",
+        "label_via": null
+      },
+      {
+        "name": "MINOCYCLINE",
+        "role": "Suspect",
+        "indication": null,
+        "label_found": true,
+        "boxed_warning": null,
+        "warnings": "WARNINGS Tooth Development Minocycline hydrochloride capsules, like other tetracycline-class antibiotics, can cause fetal harm when administered to a pregnant woman. If any tetracycline is used during pregnancy or if the patient becomes pregnant while taking these drugs, the patient should be apprised of the potential hazard to the fetus. The use of drugs of the tetracycline class during tooth development (last half of pregnancy, infancy, and childhood to the age of 8 years) may cause permanent discoloration of the teeth (yellow-gray-brown). This adverse reaction is more common during long-term use of the drug but has been observed following repeated short-term courses. Enamel hypoplasia has also been reported. Tetracycline drugs, therefore, should not be used during tooth development unless other drugs are not likely to be effective or are contraindicated. Skeletal Development All tetracyclines form a stable calcium complex in any bone-forming tissue. A decrease in the fibula growth rate has been observed in premature human infants given oral tetracycline in doses of 25 mg/kg every six hours. This reaction was shown to be reversible when the drug was discontinued. Use in Pregnancy Results of animal studies indicate that tetracyclines cross the placenta, are found in fetal tissues, and can have toxic effects on the developing fetus (often related to retardation of skeletal development). Evidence of embryotoxicity has been noted in animals treated early in pregnancy. The safet",
+        "adverse_reactions": "ADVERSE REACTIONS Due to oral minocycline's virtually complete absorption, side effects to the lower bowel, particularly diarrhea, have been infrequent. The following adverse reactions have been observed in patients receiving tetracyclines: Body as a whole : Fever and discoloration of secretions. Gastrointestinal : Anorexia, nausea, vomiting, diarrhea, dyspepsia, stomatitis, glossitis, dysphagia, enamel hypoplasia, enterocolitis, pseudomembranous colitis, pancreatitis, inflammatory lesions (with monilial overgrowth) in the oral and anogenital regions. Instances of esophagitis and esophageal ulcerations have been reported in patients taking the tetracycline-class antibiotics in capsule and tablet form. Most of these patients took the medication immediately before going to bed (see DOSAGE AND ADMINISTRATION ). Genitourinary : Vulvovaginitis. Hepatic toxicity : Hyperbilirubinemia, hepatic cholestasis, increases in liver enzymes, fatal hepatic failure, and jaundice. Hepatitis, including autoimmune hepatitis, and liver failure have been reported (see PRECAUTIONS ). Skin : Alopecia, erythema nodosum, hyperpigmentation of nails, pruritus, toxic epidermal necrolysis, vasculitis, maculopapular rash and erythematous rash. Exfoliative dermatitis has been reported. Fixed drug eruptions have been reported. Lesions occurring on the glans penis have caused balanitis. Erythema multiforme and Stevens-Johnson syndrome have been reported. Photosensitivity is discussed above (see WARNINGS-Photos",
+        "label_via": null
+      },
+      {
+        "name": "BACTRIM",
+        "role": "Suspect",
+        "indication": null,
+        "label_found": true,
+        "boxed_warning": null,
+        "warnings": "WARNINGS Embryofetal Toxicity Some epidemiologic studies suggest that exposure to BACTRIM during pregnancy may be associated with an increased risk of congenital malformations, particularly neural tube defects, cardiovascular malformations, urinary tract defects, oral clefts, and club foot. If BACTRIM is used during pregnancy, or if the patient becomes pregnant while taking this drug, the patient should be advised of the potential hazards to the fetus (see PRECAUTIONS ). Hypersensitivity and Other Serious or Fatal Reactions Fatalities and serious adverse reactions including severe cutaneous adverse reactions (SCARs) including Stevens-Johnson syndrome, toxic epidermal necrolysis, drug reaction with eosinophilia and systemic symptoms (DRESS), acute febrile neutrophilic dermatosis (AFND), acute generalized erythematous pustulosis (AGEP); fulminant hepatic necrosis; agranulocytosis, aplastic anemia and other blood dyscrasias; acute and delayed lung injury; anaphylaxis and circulatory shock have occurred with the administration of sulfamethoxazole and trimethoprim products, including BACTRIM (see ADVERSE REACTIONS ). Hypersensitivity Reactions of the Respiratory Tract Cough, shortness of breath and pulmonary infiltrates potentially representing hypersensitivity reactions of the respiratory tract have been reported in association with sulfamethoxazole and trimethoprim treatment. Respiratory Failure Other severe pulmonary adverse reactions occurring within days to week of BACTRIM in",
+        "adverse_reactions": "ADVERSE REACTIONS The following adverse reactions associated with the use of BACTRIM or sulfamethoxazole and trimethoprim were identified in clinical trials, postmarketing or published reports. Because some of these reactions were reported voluntarily from a population of uncertain size, it is not always possible to reliably estimate their frequency or establish a causal relationship to drug exposure. The most common adverse reactions are gastrointestinal disturbances (nausea, vomiting, anorexia) and allergic skin reactions (such as rash and urticaria). Fatalities and serious adverse reactions, including severe cutaneous adverse reactions (SCARs), including Stevens-Johnson syndrome, toxic epidermal necrolysis, drug reaction with eosinophilia and systemic symptoms (DRESS), acute febrile neutrophilic dermatosis (AFND), acute generalized erythematous pustulosis (AGEP); fulminant hepatic necrosis; agranulocytosis, aplastic anemia and other blood dyscrasias; acute and delayed lung injury; anaphylaxis and circulatory shock have occurred with the administration of sulfamethoxazole and trimethoprim products, including BACTRIM(see WARNINGS ). Hematologic: Agranulocytosis, aplastic anemia, thrombocytopenia, leukopenia, neutropenia, hemolytic anemia, megaloblastic anemia, hypoprothrombinemia, methemoglobinemia, eosinophilia, thrombotic thrombocytopenic purpura, idiopathic thrombocytopenic purpura. Allergic/ Immune Reactions: Stevens-Johnson syndrome, toxic epidermal necrolysis, anaphyla",
+        "label_via": null
+      }
+    ],
+    "assessment": [
+      {
+        "reaction": "Drug hypersensitivity",
+        "assessable": true,
+        "drugs": [
+          {
+            "name": "LIPITOR",
+            "role": "Suspect",
+            "for": [
+              {
+                "text": "The reporter marked this drug as a suspect."
+              }
+            ],
+            "against": [
+              {
+                "text": "The reaction is not mentioned in the label sections checked."
+              },
+              {
+                "text": "Other drugs in this report also list this reaction: LISINOPRIL, LOSARTAN POTASSIUM, METOPROLOL TARTRATE, MINOCYCLINE, BACTRIM."
+              }
+            ],
+            "unknown": [
+              {
+                "text": "What happened when the drug was stopped is not useful here (drug unknown)."
+              },
+              {
+                "text": "Whether the reaction came back on re-exposure is not reported."
+              },
+              {
+                "text": "Timing can't be checked: the report has no reaction start date."
+              }
+            ]
+          },
+          {
+            "name": "LISINOPRIL",
+            "role": "Suspect",
+            "for": [
+              {
+                "text": "The label lists this reaction under Adverse reactions.",
+                "section": "Adverse reactions",
+                "quote": "Hypersensitivity: Purpura, photosensitivity, urticaria, necrotizing angiitis (vasculitis and cutaneous vasculitis), respiratory distress including pne\u2026"
+              },
+              {
+                "text": "The reporter marked this drug as a suspect."
+              }
+            ],
+            "against": [
+              {
+                "text": "Other drugs in this report also list this reaction: LOSARTAN POTASSIUM, METOPROLOL TARTRATE, MINOCYCLINE, BACTRIM."
+              }
+            ],
+            "unknown": [
+              {
+                "text": "What happened when the drug was stopped is not useful here (drug unknown)."
+              },
+              {
+                "text": "Whether the reaction came back on re-exposure is not reported."
+              },
+              {
+                "text": "Timing can't be checked: the report has no reaction start date."
+              }
+            ]
+          },
+          {
+            "name": "LOSARTAN POTASSIUM",
+            "role": "Suspect",
+            "for": [
+              {
+                "text": "The label lists this reaction under Adverse reactions.",
+                "section": "Adverse reactions",
+                "quote": "Hypersensitivity: Angioedema, including swelling of the larynx and glottis, causing airway obstruction and/or swelling of the face, lips, pharynx, ton\u2026"
+              },
+              {
+                "text": "The reporter marked this drug as a suspect."
+              }
+            ],
+            "against": [
+              {
+                "text": "Other drugs in this report also list this reaction: LISINOPRIL, METOPROLOL TARTRATE, MINOCYCLINE, BACTRIM."
+              }
+            ],
+            "unknown": [
+              {
+                "text": "What happened when the drug was stopped is not useful here (drug unknown)."
+              },
+              {
+                "text": "Whether the reaction came back on re-exposure is not reported."
+              },
+              {
+                "text": "Timing can't be checked: the report has no reaction start date."
+              }
+            ]
+          },
+          {
+            "name": "METOPROLOL TARTRATE",
+            "role": "Suspect",
+            "for": [
+              {
+                "text": "The label lists this reaction under Warnings and precautions.",
+                "section": "Warnings and precautions",
+                "quote": "Such patients may be unresponsive to the usual doses of epinephrine used to treat allergic reaction."
+              },
+              {
+                "text": "The reporter marked this drug as a suspect."
+              }
+            ],
+            "against": [
+              {
+                "text": "Other drugs in this report also list this reaction: LISINOPRIL, LOSARTAN POTASSIUM, MINOCYCLINE, BACTRIM."
+              }
+            ],
+            "unknown": [
+              {
+                "text": "What happened when the drug was stopped is not useful here (drug unknown)."
+              },
+              {
+                "text": "Whether the reaction came back on re-exposure is not reported."
+              },
+              {
+                "text": "Timing can't be checked: the report has no reaction start date."
+              }
+            ]
+          },
+          {
+            "name": "MINOCYCLINE",
+            "role": "Suspect",
+            "for": [
+              {
+                "text": "The label lists this reaction under Adverse reactions.",
+                "section": "Adverse reactions",
+                "quote": "As with other serious adverse reactions, if any of these syndromes are recognized, the drug should be discontinued immediately: Hypersensitivity syndrome consisting of cutaneous reaction (such as rash or exfoliative dermatitis), eosinoph\u2026"
+              },
+              {
+                "text": "The reporter marked this drug as a suspect."
+              }
+            ],
+            "against": [
+              {
+                "text": "Other drugs in this report also list this reaction: LISINOPRIL, LOSARTAN POTASSIUM, METOPROLOL TARTRATE, BACTRIM."
+              }
+            ],
+            "unknown": [
+              {
+                "text": "What happened when the drug was stopped is not useful here (drug unknown)."
+              },
+              {
+                "text": "Whether the reaction came back on re-exposure is not reported."
+              },
+              {
+                "text": "Timing can't be checked: the report has no reaction start date."
+              }
+            ]
+          },
+          {
+            "name": "BACTRIM",
+            "role": "Suspect",
+            "for": [
+              {
+                "text": "The label lists this reaction under Warnings.",
+                "section": "Warnings",
+                "quote": "\u2026es and serious adverse reactions including severe cutaneous adverse reactions (SCARs) including Stevens-Johnson syndrome, toxic epidermal necrolysis, drug reaction with eosinophilia and systemic symptoms (DRESS), acute febrile neutrophilic dermatosis (AFND), acute generalized erythematous pustulosis\u2026"
+              },
+              {
+                "text": "The reporter marked this drug as a suspect."
+              }
+            ],
+            "against": [
+              {
+                "text": "Other drugs in this report also list this reaction: LISINOPRIL, LOSARTAN POTASSIUM, METOPROLOL TARTRATE, MINOCYCLINE."
+              }
+            ],
+            "unknown": [
+              {
+                "text": "What happened when the drug was stopped is not useful here (drug unknown)."
+              },
+              {
+                "text": "Whether the reaction came back on re-exposure is not reported."
+              },
+              {
+                "text": "Timing can't be checked: the report has no reaction start date."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "10003306",
+    "age": "68",
+    "sex": "Female",
+    "reactions": [
+      "Cough",
+      "Throat irritation"
+    ],
+    "drugs": [
+      {
+        "name": "LETAIRIS",
+        "role": "Suspect",
+        "indication": "PRODUCT USED FOR UNKNOWN INDICATION",
+        "label_found": true,
+        "boxed_warning": "WARNING: EMBRYO-FETAL TOXICITY Letairis is contraindicated for use during pregnancy because it may cause major birth defects if used by pregnant patients, based on studies in animals [see Contraindications (4.1) , Warnings and Precautions (5.1) , and Use in Specific Populations (8.1) ] . Therefore, for females of reproductive potential, exclude pregnancy before the initiation of treatment with Letairis. Advise use of effective contraception before initiation, during treatment, and for one month after treatment with Letairis [see Dosage and Administration (2.2) Contraindications (4.1) , Warnings and Precautions (5.1) , and Use in Specific Populations (8.1 , 8.3) ]. When pregnancy is detected, discontinue Letairis as soon as possible ( 5.1 ). WARNING: EMBRYO-FETAL TOXICITY See full prescribing information for complete boxed warning. Based on animal data Letairis may cause fetal harm if used during pregnancy ( 4.1 , 5.1 , 8.1 ). Females of reproductive potential: Exclude pregnancy before the start of treatment. Use effective contraception prior to initiation of treatment, during treatment, and for one month after treatment with Letairis ( 2.2 , 4.1 , 5.1 , 8.1 , 8.3 ) When pregnancy is detected, discontinue Letairis as soon as possible ( 5.1 ).",
+        "warnings": "5 WARNINGS AND PRECAUTIONS Fluid retention may require intervention ( 5.2 ). If patients develop acute pulmonary edema during initiation of therapy with Letairis, consider underlying pulmonary veno-occlusive disease and discontinue treatment if necessary ( 5.3 ). Decreases in sperm count have been observed in patients taking endothelin receptor antagonists ( 5.4 ). Decreases in hemoglobin have been observed within the first few weeks; measure hemoglobin at initiation, at 1 month, and periodically thereafter ( 5.5 ). 5.1 Embryo-fetal Toxicity Based on data from animal reproduction studies, Letairis may cause fetal harm when administered during pregnancy and is contraindicated during pregnancy. The available human data for endothelin receptor antagonists do not establish the presence or absence of major birth defects related to the use of Letairis. Advise patients who can become pregnant of the potential risk to a fetus. Obtain a pregnancy test prior to initiation of treatment with Letairis. Advise patients who can become pregnant to use effective contraception prior to initiation of treatment, during treatment, and for one month after discontinuation of treatment with Letairis. When pregnancy is detected, discontinue use as soon as possible [see Dosage and Administration (2.2) , and Use in Specific Populations (8.1 , 8.3) ] . 5.2 Fluid Retention Peripheral edema is a known class effect of endothelin receptor antagonists, and is also a clinical consequence of PAH and worsening ",
+        "adverse_reactions": "6 ADVERSE REACTIONS Clinically significant adverse reactions that appear in other sections of the labeling include: Embryo-fetal Toxicity [see Warnings and Precautions (5.1) , Use in Specific Populations (8.1) ] Fluid Retention [see Warnings and Precautions (5.2) ] Pulmonary Edema with PVOD [see Warnings and Precautions (5.3) ] Decreased Sperm Count [see Warnings and Precautions (5.4) ] Hematologic Changes [see Warnings and Precautions (5.5) ] Most common adverse reactions (>3% compared to placebo) are peripheral edema, nasal congestion, sinusitis, and flushing ( 6.1 ). When used in combination with tadalafil, most common adverse reactions (>5% compared with either monotherapy) are peripheral edema, headache, nasal congestion, cough, anemia, dyspepsia, and bronchitis ( 6.1 ). To report SUSPECTED ADVERSE REACTIONS, contact Gilead Sciences, Inc. at (1-800-445-3235, Option 3) or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch . 6.1 Clinical Trials Experience Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in practice. Safety data for Letairis are presented from two 12-week, placebo-controlled studies (ARIES-1 and ARIES-2) in patients with pulmonary arterial hypertension (PAH), and one randomized, double-blind, active-controlled trial in 605 patients with PAH (AMBITION) comparing Le",
+        "label_via": null
+      },
+      {
+        "name": "TYVASO",
+        "role": "Suspect",
+        "indication": null,
+        "label_found": true,
+        "boxed_warning": null,
+        "warnings": "5 WARNINGS AND PRECAUTIONS Tyvaso may cause symptomatic hypotension. ( 5.1 ) Tyvaso inhibits platelet aggregation and increases the risk of bleeding. ( 5.2 ) Tyvaso dosage adjustments may be necessary if inhibitors or inducers of CYP2C8 are added or withdrawn. ( 5.3 , 7.3 ) May cause bronchospasm: Patients with a history of hyperreactive airway disease may be more sensitive. ( 5.4 ) 5.1 Risk of Symptomatic Hypotension Treprostinil is a pulmonary and systemic vasodilator. In patients with low systemic arterial pressure, treatment with Tyvaso may produce symptomatic hypotension. 5.2 Risk of Bleeding Tyvaso inhibits platelet aggregation and increases the risk of bleeding. 5.3 Effect of Other Drugs on Treprostinil Co-administration of a cytochrome P450 (CYP) 2C8 enzyme inhibitor (e.g., gemfibrozil) may increase exposure (both C max and AUC) to treprostinil. Co-administration of a CYP2C8 enzyme inducer (e.g., rifampin) may decrease exposure to treprostinil. Increased exposure is likely to increase adverse events associated with treprostinil administration, whereas decreased exposure is likely to reduce clinical effectiveness [see Drug Interactions (7.3) and Clinical Pharmacology (12.3) ] . 5.4 Bronchospasm Like other inhaled prostaglandins, Tyvaso may cause acute bronchospasm. Patients with asthma or chronic obstructive pulmonary disease (COPD), or other bronchial hyperreactivity, are at increased risk for bronchospasm. Ensure that such patients are treated optimally for reactive ",
+        "adverse_reactions": "6 ADVERSE REACTIONS The following potential adverse reactions are described in Warnings and Precautions (5): - Decrease in systemic blood pressure [see Warnings and Precautions (5.1) ] . - Bleeding [see Warnings and Precautions (5.2) ] . Most common adverse reactions (\u22654%) are cough, headache, nausea, dizziness, flushing, throat irritation, pharyngolaryngeal pain, diarrhea, and syncope. ( 6 ) To report SUSPECTED ADVERSE REACTIONS, contact United Therapeutics Corp. at 1-866-458-6479 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. 6.1 Clinical Trials Experience Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in practice. Pulmonary Arterial Hypertension In a 12-week, placebo-controlled study (TRIUMPH I) of 235 patients with PAH (WHO Group 1 and nearly all NYHA Functional Class III), the most commonly reported adverse reactions on Tyvaso included cough and throat irritation, headache, gastrointestinal effects, muscle, jaw or bone pain, dizziness, flushing, and syncope. Table 1 lists the adverse reactions that occurred at a rate of at least 4% and were more frequent in patients treated with Tyvaso than with placebo. Table 1: Adverse Events in \u22654% of PAH Patients Receiving Tyvaso and More Frequent More than 3% greater than placebo than Placebo in TRIUMPH I Adverse Event Treatment ",
+        "label_via": null
+      }
+    ],
+    "assessment": [
+      {
+        "reaction": "Cough",
+        "assessable": true,
+        "drugs": [
+          {
+            "name": "LETAIRIS",
+            "role": "Suspect",
+            "for": [
+              {
+                "text": "The label lists this reaction under Adverse reactions.",
+                "section": "Adverse reactions",
+                "quote": "\u2026in combination with tadalafil, most common adverse reactions (>5% compared with either monotherapy) are peripheral edema, headache, nasal congestion, cough, anemia, dyspepsia, and bronchitis ( 6.1 )."
+              },
+              {
+                "text": "The reporter marked this drug as a suspect."
+              }
+            ],
+            "against": [
+              {
+                "text": "Other drugs in this report also list this reaction: TYVASO."
+              }
+            ],
+            "unknown": [
+              {
+                "text": "What happened when the drug was stopped is not useful here (drug dose not changed)."
+              },
+              {
+                "text": "Whether the reaction came back on re-exposure is not reported."
+              },
+              {
+                "text": "Timing can't be checked: the report has no reaction start date (drug started 20111014)."
+              }
+            ]
+          },
+          {
+            "name": "TYVASO",
+            "role": "Suspect",
+            "for": [
+              {
+                "text": "The label lists this reaction under Adverse reactions.",
+                "section": "Adverse reactions",
+                "quote": "Most common adverse reactions (\u22654%) are cough, headache, nausea, dizziness, flushing, throat irritation, pharyngolaryngeal pain, diarrhea, and syncope."
+              },
+              {
+                "text": "The reporter marked this drug as a suspect."
+              }
+            ],
+            "against": [
+              {
+                "text": "Other drugs in this report also list this reaction: LETAIRIS."
+              }
+            ],
+            "unknown": [
+              {
+                "text": "What happened when the drug was stopped is not reported."
+              },
+              {
+                "text": "Whether the reaction came back on re-exposure is not reported."
+              },
+              {
+                "text": "Timing can't be checked: the report has no reaction start date."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "reaction": "Throat irritation",
+        "assessable": true,
+        "drugs": [
+          {
+            "name": "LETAIRIS",
+            "role": "Suspect",
+            "for": [
+              {
+                "text": "The reporter marked this drug as a suspect."
+              }
+            ],
+            "against": [
+              {
+                "text": "The reaction is not mentioned in the label sections checked."
+              },
+              {
+                "text": "Other drugs in this report also list this reaction: TYVASO."
+              }
+            ],
+            "unknown": [
+              {
+                "text": "What happened when the drug was stopped is not useful here (drug dose not changed)."
+              },
+              {
+                "text": "Whether the reaction came back on re-exposure is not reported."
+              },
+              {
+                "text": "Timing can't be checked: the report has no reaction start date (drug started 20111014)."
+              }
+            ]
+          },
+          {
+            "name": "TYVASO",
+            "role": "Suspect",
+            "for": [
+              {
+                "text": "The label lists this reaction under Adverse reactions.",
+                "section": "Adverse reactions",
+                "quote": "Most common adverse reactions (\u22654%) are cough, headache, nausea, dizziness, flushing, throat irritation, pharyngolaryngeal pain, diarrhea, and syncope."
+              },
+              {
+                "text": "The reporter marked this drug as a suspect."
+              }
+            ],
+            "against": [],
+            "unknown": [
+              {
+                "text": "What happened when the drug was stopped is not reported."
+              },
+              {
+                "text": "Whether the reaction came back on re-exposure is not reported."
+              },
+              {
+                "text": "Timing can't be checked: the report has no reaction start date."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "10003307",
+    "age": "65",
+    "sex": "Female",
+    "reactions": [
+      "Rhinorrhoea"
+    ],
+    "drugs": [
+      {
+        "name": "LETAIRIS",
+        "role": "Suspect",
+        "indication": "PULMONARY HYPERTENSION",
+        "label_found": true,
+        "boxed_warning": "WARNING: EMBRYO-FETAL TOXICITY Letairis is contraindicated for use during pregnancy because it may cause major birth defects if used by pregnant patients, based on studies in animals [see Contraindications (4.1) , Warnings and Precautions (5.1) , and Use in Specific Populations (8.1) ] . Therefore, for females of reproductive potential, exclude pregnancy before the initiation of treatment with Letairis. Advise use of effective contraception before initiation, during treatment, and for one month after treatment with Letairis [see Dosage and Administration (2.2) Contraindications (4.1) , Warnings and Precautions (5.1) , and Use in Specific Populations (8.1 , 8.3) ]. When pregnancy is detected, discontinue Letairis as soon as possible ( 5.1 ). WARNING: EMBRYO-FETAL TOXICITY See full prescribing information for complete boxed warning. Based on animal data Letairis may cause fetal harm if used during pregnancy ( 4.1 , 5.1 , 8.1 ). Females of reproductive potential: Exclude pregnancy before the start of treatment. Use effective contraception prior to initiation of treatment, during treatment, and for one month after treatment with Letairis ( 2.2 , 4.1 , 5.1 , 8.1 , 8.3 ) When pregnancy is detected, discontinue Letairis as soon as possible ( 5.1 ).",
+        "warnings": "5 WARNINGS AND PRECAUTIONS Fluid retention may require intervention ( 5.2 ). If patients develop acute pulmonary edema during initiation of therapy with Letairis, consider underlying pulmonary veno-occlusive disease and discontinue treatment if necessary ( 5.3 ). Decreases in sperm count have been observed in patients taking endothelin receptor antagonists ( 5.4 ). Decreases in hemoglobin have been observed within the first few weeks; measure hemoglobin at initiation, at 1 month, and periodically thereafter ( 5.5 ). 5.1 Embryo-fetal Toxicity Based on data from animal reproduction studies, Letairis may cause fetal harm when administered during pregnancy and is contraindicated during pregnancy. The available human data for endothelin receptor antagonists do not establish the presence or absence of major birth defects related to the use of Letairis. Advise patients who can become pregnant of the potential risk to a fetus. Obtain a pregnancy test prior to initiation of treatment with Letairis. Advise patients who can become pregnant to use effective contraception prior to initiation of treatment, during treatment, and for one month after discontinuation of treatment with Letairis. When pregnancy is detected, discontinue use as soon as possible [see Dosage and Administration (2.2) , and Use in Specific Populations (8.1 , 8.3) ] . 5.2 Fluid Retention Peripheral edema is a known class effect of endothelin receptor antagonists, and is also a clinical consequence of PAH and worsening ",
+        "adverse_reactions": "6 ADVERSE REACTIONS Clinically significant adverse reactions that appear in other sections of the labeling include: Embryo-fetal Toxicity [see Warnings and Precautions (5.1) , Use in Specific Populations (8.1) ] Fluid Retention [see Warnings and Precautions (5.2) ] Pulmonary Edema with PVOD [see Warnings and Precautions (5.3) ] Decreased Sperm Count [see Warnings and Precautions (5.4) ] Hematologic Changes [see Warnings and Precautions (5.5) ] Most common adverse reactions (>3% compared to placebo) are peripheral edema, nasal congestion, sinusitis, and flushing ( 6.1 ). When used in combination with tadalafil, most common adverse reactions (>5% compared with either monotherapy) are peripheral edema, headache, nasal congestion, cough, anemia, dyspepsia, and bronchitis ( 6.1 ). To report SUSPECTED ADVERSE REACTIONS, contact Gilead Sciences, Inc. at (1-800-445-3235, Option 3) or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch . 6.1 Clinical Trials Experience Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in practice. Safety data for Letairis are presented from two 12-week, placebo-controlled studies (ARIES-1 and ARIES-2) in patients with pulmonary arterial hypertension (PAH), and one randomized, double-blind, active-controlled trial in 605 patients with PAH (AMBITION) comparing Le",
+        "label_via": null
+      },
+      {
+        "name": "OXYGEN.",
+        "role": "Concomitant",
+        "indication": null,
+        "label_found": true,
+        "boxed_warning": null,
+        "warnings": null,
+        "adverse_reactions": null,
+        "label_via": null
+      }
+    ],
+    "assessment": [
+      {
+        "reaction": "Rhinorrhoea",
+        "assessable": true,
+        "drugs": [
+          {
+            "name": "LETAIRIS",
+            "role": "Suspect",
+            "for": [
+              {
+                "text": "The label lists this reaction under Adverse reactions.",
+                "section": "Adverse reactions",
+                "quote": "\u2026tions (5.4) ] Hematologic Changes [see Warnings and Precautions (5.5) ] Most common adverse reactions (>3% compared to placebo) are peripheral edema, nasal congestion, sinusitis, and flushing ( 6.1 )."
+              },
+              {
+                "text": "The reporter marked this drug as a suspect."
+              }
+            ],
+            "against": [],
+            "unknown": [
+              {
+                "text": "What happened when the drug was stopped is not useful here (drug dose not changed)."
+              },
+              {
+                "text": "Whether the reaction came back on re-exposure is not reported."
+              },
+              {
+                "text": "Timing can't be checked: the report has no reaction start date (drug started 20110510)."
+              }
+            ]
+          },
+          {
+            "name": "OXYGEN.",
+            "role": "Concomitant",
+            "for": [],
+            "against": [
+              {
+                "text": "The reaction is not mentioned in the label sections checked."
+              },
+              {
+                "text": "The reporter listed this drug as concomitant, not suspect."
+              },
+              {
+                "text": "Other drugs in this report also list this reaction: LETAIRIS."
+              }
+            ],
+            "unknown": [
+              {
+                "text": "What happened when the drug was stopped is not reported."
+              },
+              {
+                "text": "Whether the reaction came back on re-exposure is not reported."
+              },
+              {
+                "text": "Timing can't be checked: the report has no reaction start date."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "10003308",
+    "age": "59",
+    "sex": "Female",
+    "reactions": [
+      "Unevaluable event",
+      "Malaise"
+    ],
+    "drugs": [
+      {
+        "name": "LETAIRIS",
+        "role": "Suspect",
+        "indication": "PULMONARY HYPERTENSION",
+        "label_found": true,
+        "boxed_warning": "WARNING: EMBRYO-FETAL TOXICITY Letairis is contraindicated for use during pregnancy because it may cause major birth defects if used by pregnant patients, based on studies in animals [see Contraindications (4.1) , Warnings and Precautions (5.1) , and Use in Specific Populations (8.1) ] . Therefore, for females of reproductive potential, exclude pregnancy before the initiation of treatment with Letairis. Advise use of effective contraception before initiation, during treatment, and for one month after treatment with Letairis [see Dosage and Administration (2.2) Contraindications (4.1) , Warnings and Precautions (5.1) , and Use in Specific Populations (8.1 , 8.3) ]. When pregnancy is detected, discontinue Letairis as soon as possible ( 5.1 ). WARNING: EMBRYO-FETAL TOXICITY See full prescribing information for complete boxed warning. Based on animal data Letairis may cause fetal harm if used during pregnancy ( 4.1 , 5.1 , 8.1 ). Females of reproductive potential: Exclude pregnancy before the start of treatment. Use effective contraception prior to initiation of treatment, during treatment, and for one month after treatment with Letairis ( 2.2 , 4.1 , 5.1 , 8.1 , 8.3 ) When pregnancy is detected, discontinue Letairis as soon as possible ( 5.1 ).",
+        "warnings": "5 WARNINGS AND PRECAUTIONS Fluid retention may require intervention ( 5.2 ). If patients develop acute pulmonary edema during initiation of therapy with Letairis, consider underlying pulmonary veno-occlusive disease and discontinue treatment if necessary ( 5.3 ). Decreases in sperm count have been observed in patients taking endothelin receptor antagonists ( 5.4 ). Decreases in hemoglobin have been observed within the first few weeks; measure hemoglobin at initiation, at 1 month, and periodically thereafter ( 5.5 ). 5.1 Embryo-fetal Toxicity Based on data from animal reproduction studies, Letairis may cause fetal harm when administered during pregnancy and is contraindicated during pregnancy. The available human data for endothelin receptor antagonists do not establish the presence or absence of major birth defects related to the use of Letairis. Advise patients who can become pregnant of the potential risk to a fetus. Obtain a pregnancy test prior to initiation of treatment with Letairis. Advise patients who can become pregnant to use effective contraception prior to initiation of treatment, during treatment, and for one month after discontinuation of treatment with Letairis. When pregnancy is detected, discontinue use as soon as possible [see Dosage and Administration (2.2) , and Use in Specific Populations (8.1 , 8.3) ] . 5.2 Fluid Retention Peripheral edema is a known class effect of endothelin receptor antagonists, and is also a clinical consequence of PAH and worsening ",
+        "adverse_reactions": "6 ADVERSE REACTIONS Clinically significant adverse reactions that appear in other sections of the labeling include: Embryo-fetal Toxicity [see Warnings and Precautions (5.1) , Use in Specific Populations (8.1) ] Fluid Retention [see Warnings and Precautions (5.2) ] Pulmonary Edema with PVOD [see Warnings and Precautions (5.3) ] Decreased Sperm Count [see Warnings and Precautions (5.4) ] Hematologic Changes [see Warnings and Precautions (5.5) ] Most common adverse reactions (>3% compared to placebo) are peripheral edema, nasal congestion, sinusitis, and flushing ( 6.1 ). When used in combination with tadalafil, most common adverse reactions (>5% compared with either monotherapy) are peripheral edema, headache, nasal congestion, cough, anemia, dyspepsia, and bronchitis ( 6.1 ). To report SUSPECTED ADVERSE REACTIONS, contact Gilead Sciences, Inc. at (1-800-445-3235, Option 3) or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch . 6.1 Clinical Trials Experience Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in practice. Safety data for Letairis are presented from two 12-week, placebo-controlled studies (ARIES-1 and ARIES-2) in patients with pulmonary arterial hypertension (PAH), and one randomized, double-blind, active-controlled trial in 605 patients with PAH (AMBITION) comparing Le",
+        "label_via": null
+      }
+    ],
+    "assessment": [
+      {
+        "reaction": "Unevaluable event",
+        "assessable": false,
+        "note": "Describes how the drug was used, not a clinical reaction, so no cause is suggested."
+      },
+      {
+        "reaction": "Malaise",
+        "assessable": true,
+        "drugs": [
+          {
+            "name": "LETAIRIS",
+            "role": "Suspect",
+            "for": [
+              {
+                "text": "The reporter marked this drug as a suspect."
+              }
+            ],
+            "against": [
+              {
+                "text": "The reaction is not mentioned in the label sections checked."
+              }
+            ],
+            "unknown": [
+              {
+                "text": "What happened when the drug was stopped is not useful here (drug dose not changed)."
+              },
+              {
+                "text": "Whether the reaction came back on re-exposure is not reported."
+              },
+              {
+                "text": "Timing can't be checked: the report has no reaction start date (drug started 20101122)."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "10003309",
+    "age": "42",
+    "sex": "Male",
+    "reactions": [
+      "Hepatic enzyme increased"
+    ],
+    "drugs": [
+      {
+        "name": "LETAIRIS",
+        "role": "Suspect",
+        "indication": "SLEEP APNOEA SYNDROME",
+        "label_found": true,
+        "boxed_warning": "WARNING: EMBRYO-FETAL TOXICITY Letairis is contraindicated for use during pregnancy because it may cause major birth defects if used by pregnant patients, based on studies in animals [see Contraindications (4.1) , Warnings and Precautions (5.1) , and Use in Specific Populations (8.1) ] . Therefore, for females of reproductive potential, exclude pregnancy before the initiation of treatment with Letairis. Advise use of effective contraception before initiation, during treatment, and for one month after treatment with Letairis [see Dosage and Administration (2.2) Contraindications (4.1) , Warnings and Precautions (5.1) , and Use in Specific Populations (8.1 , 8.3) ]. When pregnancy is detected, discontinue Letairis as soon as possible ( 5.1 ). WARNING: EMBRYO-FETAL TOXICITY See full prescribing information for complete boxed warning. Based on animal data Letairis may cause fetal harm if used during pregnancy ( 4.1 , 5.1 , 8.1 ). Females of reproductive potential: Exclude pregnancy before the start of treatment. Use effective contraception prior to initiation of treatment, during treatment, and for one month after treatment with Letairis ( 2.2 , 4.1 , 5.1 , 8.1 , 8.3 ) When pregnancy is detected, discontinue Letairis as soon as possible ( 5.1 ).",
+        "warnings": "5 WARNINGS AND PRECAUTIONS Fluid retention may require intervention ( 5.2 ). If patients develop acute pulmonary edema during initiation of therapy with Letairis, consider underlying pulmonary veno-occlusive disease and discontinue treatment if necessary ( 5.3 ). Decreases in sperm count have been observed in patients taking endothelin receptor antagonists ( 5.4 ). Decreases in hemoglobin have been observed within the first few weeks; measure hemoglobin at initiation, at 1 month, and periodically thereafter ( 5.5 ). 5.1 Embryo-fetal Toxicity Based on data from animal reproduction studies, Letairis may cause fetal harm when administered during pregnancy and is contraindicated during pregnancy. The available human data for endothelin receptor antagonists do not establish the presence or absence of major birth defects related to the use of Letairis. Advise patients who can become pregnant of the potential risk to a fetus. Obtain a pregnancy test prior to initiation of treatment with Letairis. Advise patients who can become pregnant to use effective contraception prior to initiation of treatment, during treatment, and for one month after discontinuation of treatment with Letairis. When pregnancy is detected, discontinue use as soon as possible [see Dosage and Administration (2.2) , and Use in Specific Populations (8.1 , 8.3) ] . 5.2 Fluid Retention Peripheral edema is a known class effect of endothelin receptor antagonists, and is also a clinical consequence of PAH and worsening ",
+        "adverse_reactions": "6 ADVERSE REACTIONS Clinically significant adverse reactions that appear in other sections of the labeling include: Embryo-fetal Toxicity [see Warnings and Precautions (5.1) , Use in Specific Populations (8.1) ] Fluid Retention [see Warnings and Precautions (5.2) ] Pulmonary Edema with PVOD [see Warnings and Precautions (5.3) ] Decreased Sperm Count [see Warnings and Precautions (5.4) ] Hematologic Changes [see Warnings and Precautions (5.5) ] Most common adverse reactions (>3% compared to placebo) are peripheral edema, nasal congestion, sinusitis, and flushing ( 6.1 ). When used in combination with tadalafil, most common adverse reactions (>5% compared with either monotherapy) are peripheral edema, headache, nasal congestion, cough, anemia, dyspepsia, and bronchitis ( 6.1 ). To report SUSPECTED ADVERSE REACTIONS, contact Gilead Sciences, Inc. at (1-800-445-3235, Option 3) or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch . 6.1 Clinical Trials Experience Because clinical trials are conducted under widely varying conditions, adverse reaction rates observed in the clinical trials of a drug cannot be directly compared to rates in the clinical trials of another drug and may not reflect the rates observed in practice. Safety data for Letairis are presented from two 12-week, placebo-controlled studies (ARIES-1 and ARIES-2) in patients with pulmonary arterial hypertension (PAH), and one randomized, double-blind, active-controlled trial in 605 patients with PAH (AMBITION) comparing Le",
+        "label_via": null
+      }
+    ],
+    "assessment": [
+      {
+        "reaction": "Hepatic enzyme increased",
+        "assessable": true,
+        "drugs": [
+          {
+            "name": "LETAIRIS",
+            "role": "Suspect",
+            "for": [
+              {
+                "text": "The label lists this reaction under Adverse reactions.",
+                "section": "Adverse reactions",
+                "quote": "During 12-week controlled clinical trials, the incidence of aminotransferase elevations >3 \u00d7 upper limit of normal (ULN) were 0% on Letairis and 2.3% on placebo."
+              },
+              {
+                "text": "The reporter marked this drug as a suspect."
+              }
+            ],
+            "against": [
+              {
+                "text": "The reaction improved even though this drug was continued at the same dose."
+              }
+            ],
+            "unknown": [
+              {
+                "text": "Whether the reaction came back on re-exposure is not reported."
+              },
+              {
+                "text": "Timing can't be checked: the report has no reaction start date."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
