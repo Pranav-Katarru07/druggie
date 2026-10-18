@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Druggie Diagrams</title>
+<!-- Source for the README diagrams in docs/images/. Open in a browser and screenshot each section to re-render. -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #f4f4f4; --card: #fff; --ink: #111; --muted: #6b6b6b; --line: #dedede; --soft: #ececec;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: #ddd; font-family: "Plus Jakarta Sans", system-ui, sans-serif; color: var(--ink); padding: 40px; }
+  .diagram { width: 1400px; background: var(--bg); border-radius: 28px; padding: 48px 52px 44px; margin-bottom: 40px; }
+  .eyebrow { font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  h1 { font-size: 34px; font-weight: 800; letter-spacing: -.02em; margin: 6px 0 6px; }
+  .sub { font-size: 17px; color: var(--muted); margin-bottom: 34px; max-width: 980px; line-height: 1.45; }
+  code, .mono { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: .86em; }
+
+  /* ---------- shared boxes ---------- */
+  .box { background: var(--card); border: 1.5px solid var(--line); border-radius: 18px; padding: 16px 18px; }
+  .box.dark { background: var(--ink); color: #fff; border-color: var(--ink); }
+  .box.dark .muted, .box.dark li { color: #c9c9c9; }
+  .box h3 { font-size: 17px; font-weight: 700; margin-bottom: 4px; }
+  .box .muted { font-size: 14px; color: var(--muted); line-height: 1.4; }
+  .box ul { padding-left: 18px; margin-top: 8px; }
+  .box li { font-size: 14px; line-height: 1.5; color: #333; }
+  .chip { display: inline-block; font-size: 12.5px; font-weight: 600; background: var(--soft); border-radius: 999px; padding: 4px 10px; margin: 6px 4px 0 0; }
+  .box.dark .chip { background: #2a2a2a; color: #eee; }
+  .col-title { font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+
+  /* ---------- architecture ---------- */
+  .arch { display: grid; grid-template-columns: 250px 40px 330px 40px 210px 40px 1fr; align-items: stretch; }
+  .stack { display: flex; flex-direction: column; gap: 12px; }
+  .arrow { display: flex; align-items: center; justify-content: center; font-size: 26px; color: #999; }
+  .file { background: var(--card); border: 1.5px dashed #bdbdbd; border-radius: 14px; padding: 14px 16px; }
+  .file h3 { font-family: "JetBrains Mono", monospace; font-size: 15px; }
+  .file .muted { font-size: 13.5px; color: var(--muted); margin-top: 4px; line-height: 1.4; }
+  .vcenter { display: flex; flex-direction: column; justify-content: center; gap: 12px; }
+  .runtime { display: flex; flex-direction: column; gap: 12px; }
+  .down { text-align: center; color: #999; font-size: 22px; line-height: 1; }
+  .legend { display: flex; gap: 26px; margin-top: 30px; font-size: 14px; color: var(--muted); align-items: center; }
+  .legend span.sw { display: inline-block; width: 22px; height: 14px; border-radius: 5px; margin-right: 8px; vertical-align: -2px; }
+  .phase { display: flex; justify-content: space-between; margin-top: 18px; padding-top: 16px; border-top: 1.5px solid var(--line); font-size: 14px; color: var(--muted); }
+  .phase b { color: var(--ink); }
+
+  /* ---------- flow ---------- */
+  .flow { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; position: relative; }
+  .step { position: relative; padding-right: 26px; }
+  .step:not(:last-child)::after { content: "→"; position: absolute; right: 2px; top: 64px; font-size: 24px; color: #999; }
+  .num { width: 38px; height: 38px; border-radius: 50%; background: var(--ink); color: #fff; font-weight: 800; display: flex; align-items: center; justify-content: center; font-size: 16px; margin-bottom: 12px; }
+  .step .box { min-height: 290px; }
+  .step .box h3 { font-size: 18px; }
+  .mini { margin-top: 12px; background: var(--bg); border-radius: 12px; padding: 10px 12px; font-size: 13px; color: #333; line-height: 1.5; }
+  .mini b { font-weight: 700; }
+  .keys { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+  .key { font-weight: 700; font-size: 13px; border: 1.5px solid var(--ink); border-radius: 8px; padding: 3px 9px; background: #fff; }
+  .key.dark { background: var(--ink); color: #fff; }
+  .footer-bar { margin-top: 30px; background: var(--ink); color: #fff; border-radius: 18px; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; font-size: 16px; }
+  .footer-bar b { font-size: 18px; }
+  .footer-bar span { color: #bbb; }
+
+  /* ---------- engine ---------- */
+  .engine { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+  .lane { background: var(--card); border-radius: 22px; padding: 24px; border: 1.5px solid var(--line); }
+  .lane h2 { font-size: 21px; font-weight: 800; margin-bottom: 4px; }
+  .lane > .muted { font-size: 14.5px; color: var(--muted); margin-bottom: 18px; }
+  .chain { display: flex; flex-direction: column; gap: 0; }
+  .link { text-align: center; color: #999; font-size: 18px; line-height: 26px; }
+  .q { display: grid; grid-template-columns: 44px 1fr; gap: 6px 10px; }
+  .q .n { font-weight: 800; font-size: 14px; background: var(--soft); border-radius: 8px; text-align: center; padding: 6px 0; }
+  .q .t { font-size: 14px; padding-top: 5px; line-height: 1.35; }
+  .q .t i { color: var(--muted); font-style: normal; }
+  .scale { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: 10px; }
+  .scale div { border-radius: 10px; padding: 8px; font-size: 13px; text-align: center; background: var(--soft); }
+  .scale div b { display: block; font-size: 15px; }
+  .scale .hi { background: var(--ink); color: #fff; }
+  .scale .mid { background: #555; color: #fff; }
+  .scale .lo { background: #bbb; }
+  .formula { font-family: "JetBrains Mono", monospace; font-size: 14px; background: var(--bg); border-radius: 10px; padding: 10px 12px; margin-top: 8px; line-height: 1.6; }
+  .merge { margin-top: 26px; display: grid; grid-template-columns: 1fr auto 1fr; gap: 18px; align-items: center; }
+  .merge .box { text-align: center; }
+  .manual { margin-top: 10px; font-size: 13px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<!-- =============================== 1. ARCHITECTURE =============================== -->
+<section class="diagram" id="architecture">
+  <div class="eyebrow">Tech stack</div>
+  <h1>How Druggie is built</h1>
+  <p class="sub">Python does the heavy work once, offline, and writes two JSON files. The React app reads those files and runs in the browser. A tiny Python server is only needed for the optional AI draft, so the API key never reaches the browser.</p>
+
+  <div class="arch">
+    <!-- Sources -->
+    <div>
+      <div class="col-title">1 · Data sources</div>
+      <div class="stack">
+        <div class="box"><h3>Synthea</h3><div class="muted">Synthetic patients as CSV: meds, conditions, labs, allergies</div></div>
+        <div class="box"><h3>Planted events</h3><div class="muted"><code>cases/planted_events.json</code> — known true reactions for the tool to find</div></div>
+        <div class="box"><h3>openFDA</h3><div class="muted">Drug labels (boxed warning, warnings, adverse reactions) + FAERS sample</div></div>
+        <div class="box"><h3>RxNorm (NLM)</h3><div class="muted">Ingredients and drug classes for each prescription</div></div>
+      </div>
+    </div>
+    <div class="arrow">→</div>
+
+    <!-- Python pipeline -->
+    <div>
+      <div class="col-title">2 · Python pipeline (offline)</div>
+      <div class="stack">
+        <div class="box dark">
+          <h3><code>synthea_pipeline.py</code></h3>
+          <ul>
+            <li>Merges refills into drug courses</li>
+            <li>Builds a case per new condition + drugs at onset</li>
+            <li>Finds each drug's FDA label &amp; class</li>
+            <li>Answers 6 Naranjo questions, with reasons</li>
+          </ul>
+          <span class="chip">extractData.py</span><span class="chip">stdlib only</span>
+        </div>
+        <div class="down">↓ cases</div>
+        <div class="box dark">
+          <h3><code>python -m analytics</code></h3>
+          <ul>
+            <li>Name cleaning (normalize.py)</li>
+            <li>IDF → PCA → k-means groups</li>
+            <li>PRR drug → condition signals</li>
+            <li>Knowledge graph + 0–100 priority</li>
+          </ul>
+          <span class="chip">numpy</span><span class="chip">scikit-learn</span><span class="chip">pytest</span>
+        </div>
+      </div>
+    </div>
+    <div class="arrow">→</div>
+
+    <!-- Static data -->
+    <div class="vcenter">
+      <div class="col-title">3 · Static data</div>
+      <div class="file"><h3>data.json</h3><div class="muted">Patients, cases, labels, Naranjo answers</div></div>
+      <div class="file"><h3>insights.json</h3><div class="muted">Groups, signals, graph, priorities</div></div>
+      <div class="file"><h3>faers.json</h3><div class="muted">FAERS reports sample</div></div>
+      <div class="muted" style="font-size:13px;color:var(--muted)">in <code>frontend/public/</code>, committed so the demo runs with no setup</div>
+    </div>
+    <div class="arrow">→</div>
+
+    <!-- Runtime -->
+    <div>
+      <div class="col-title">4 · Runtime</div>
+      <div class="runtime">
+        <div class="box">
+          <h3>React app (browser)</h3>
+          <div class="muted">React 19 · TypeScript · Vite · React Router · d3-force</div>
+          <span class="chip">Review deck</span><span class="chip">Patients</span><span class="chip">Insights</span>
+          <div class="mini">Swipe cards, flip to evidence, PCA map, knowledge graph. Decisions saved in the browser.</div>
+        </div>
+        <div class="down">↓ <span class="mono" style="font-size:14px">POST /api/suggest</span> (optional)</div>
+        <div class="box">
+          <h3><code>server.py</code></h3>
+          <div class="muted">Python stdlib HTTP server. Builds a prompt from the case evidence (E1, E2…) and holds the API key.</div>
+        </div>
+        <div class="down">↓</div>
+        <div class="box dark">
+          <h3>Any OpenAI-compatible LLM</h3>
+          <div class="muted">Gemini by default · Groq · OpenRouter. Returns a JSON draft that cites evidence ids.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="phase">
+    <div><b>Build time</b> — runs once on your machine: <code>python synthea_pipeline.py &amp;&amp; python -m analytics</code></div>
+    <div><b>Run time</b> — <code>npm run dev</code> (+ <code>python server.py</code> for AI)</div>
+  </div>
+</section>
+
+<!-- =============================== 2. REVIEWER FLOW =============================== -->
+<section class="diagram" id="flow">
+  <div class="eyebrow">How it works</div>
+  <h1>From a pile of cases to a decision, in five steps</h1>
+  <p class="sub">The reviewer never has to rebuild a timeline or open a label. Druggie gathers and sorts; the doctor judges.</p>
+
+  <div class="flow">
+    <div class="step">
+      <div class="num">1</div>
+      <div class="box">
+        <h3>Sort the queue</h3>
+        <div class="muted">Every case gets a 0–100 priority from population signals and how unusual it is.</div>
+        <div class="mini"><b>82</b> Kim Schneider<br>epoetin alfa → CKD stage 4<br>5 of 10 on it (29×)</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="num">2</div>
+      <div class="box">
+        <h3>Open a drug deck</h3>
+        <div class="muted">Cases are grouped by the drug most likely to have caused them.</div>
+        <div class="mini"><b>Lisinopril</b> · 5 cases<br><b>Epoetin alfa</b> · 2 cases<br><b>Norethindrone</b> · 2 cases</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="num">3</div>
+      <div class="box">
+        <h3>Read the front</h3>
+        <div class="muted">Who the patient is and what happened, in one look.</div>
+        <div class="mini">Name · age · sex<br>Event + onset date<br>Symptoms · BMI · BP · smoking<br>Existing conditions</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="num">4</div>
+      <div class="box">
+        <h3>Flip for evidence</h3>
+        <div class="muted">Four tabs answer "why this drug?"</div>
+        <div class="mini"><b>Drug</b> FDA label warnings<br><b>Reasons</b> Naranjo, each answered<br><b>Data</b> cleaned source record<br><b>Insights</b> population view<br>+ optional <b>AI draft</b></div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="num">5</div>
+      <div class="box">
+        <h3>Decide</h3>
+        <div class="muted">One motion: does this drug most likely explain the event?</div>
+        <div class="keys"><span class="key">→ Agree</span><span class="key dark">← Disagree</span><span class="key">Space flip</span><span class="key">Z undo</span></div>
+        <div class="mini">Next card slides in. Fully reviewed decks fade out.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bar">
+    <b>The doctor makes the call.</b>
+    <span>Druggie never files a report and never makes a causality decision.</span>
+  </div>
+</section>
+
+<!-- =============================== 3. ENGINE =============================== -->
+<section class="diagram" id="engine">
+  <div class="eyebrow">Under the hood</div>
+  <h1>Two engines feed every card</h1>
+  <p class="sub">One looks closely at a single patient (is this drug a plausible cause?). The other looks across the whole population (where should the reviewer look first?).</p>
+
+  <div class="engine">
+    <div class="lane">
+      <h2>Per case · Naranjo scoring</h2>
+      <div class="muted">For every drug the patient was on when the problem started.</div>
+      <div class="chain">
+        <div class="q"><div class="n">Q1</div><div class="t">Known reaction? <i>— search the openFDA label text</i></div></div>
+        <div style="height:12px"></div>
+        <div class="q"><div class="n">Q2</div><div class="t">Started after the drug? <i>— drug start vs. onset date</i></div></div>
+        <div style="height:12px"></div>
+        <div class="q"><div class="n">Q3</div><div class="t">Better after stopping? <i>— did the problem end after the course?</i></div></div>
+        <div style="height:12px"></div>
+        <div class="q"><div class="n">Q4</div><div class="t">Back on restarting? <i>— later course of same drug or class (RxNorm)</i></div></div>
+        <div style="height:12px"></div>
+        <div class="q"><div class="n">Q8</div><div class="t">Similar reaction before? <i>— history on related drugs, allergies</i></div></div>
+        <div style="height:12px"></div>
+        <div class="q"><div class="n">Q10</div><div class="t">Objective evidence? <i>— abnormal labs (ALT, AST…) near onset</i></div></div>
+      </div>
+      <div class="scale">
+        <div class="hi"><b>≥ 9</b>definite</div>
+        <div class="mid"><b>5–8</b>probable</div>
+        <div><b>1–4</b>possible</div>
+        <div class="lo"><b>≤ 0</b>doubtful</div>
+      </div>
+      <div class="manual">Q5, Q6, Q7, Q9 need clinical judgement and are left to the reviewer on purpose.</div>
+    </div>
+
+    <div class="lane">
+      <h2>Across the population · insights</h2>
+      <div class="muted">Every patient, not just the ones in the deck.</div>
+      <div class="chain">
+        <div class="box"><h3>Patient × (drug, condition) matrix</h3><div class="muted">Yes/no per patient, IDF-weighted so common items count less</div></div>
+        <div class="link">↓</div>
+        <div class="box"><h3>PCA → k-means</h3><div class="muted">2-D map of similar patients; k chosen by silhouette score (2–8); each group named by what sets it apart</div></div>
+        <div class="link">↓</div>
+        <div class="box"><h3>PRR signals (Evans criteria)</h3>
+          <div class="formula">PRR = P(cond | on drug) ÷ P(cond | not on drug)<br>signal if n ≥ 3, PRR ≥ 2, χ² ≥ 4</div>
+          <div class="muted" style="margin-top:6px">Only conditions that start after the drug; a drug's own indication is never counted</div>
+        </div>
+        <div class="link">↓</div>
+        <div class="box"><h3>Priority 0–100</h3><div class="formula">0.7 × strongest signal + 0.3 × how unusual for its group</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="merge">
+    <div class="box"><h3>Drugs ranked by score</h3><div class="muted">Top drug = the deck the case goes into</div></div>
+    <div style="font-size:26px;color:#999">→ &nbsp;one card&nbsp; ←</div>
+    <div class="box"><h3>Priority, group, signals, graph</h3><div class="muted">Decides what the reviewer sees first</div></div>
+  </div>
+</section>
+
+</body>
+</html>
