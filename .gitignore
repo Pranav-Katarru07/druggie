@@ -6,3 +6,4 @@ synthea/
 fhir/
 csv/
 raw_logs/
+.vercel
