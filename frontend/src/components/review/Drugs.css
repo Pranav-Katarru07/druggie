@@ -1,0 +1,11 @@
+/* Drugs page: a grid of drug cards (name + number of cases) */
+.drugs { width: min(1028px, 100%); margin: 0 auto; padding: 4px 20px 40px; }
+.drugs-title { margin: 0 0 22px; font-size: 1.9rem; font-weight: 800; letter-spacing: -0.02em; }
+
+.drug-grid { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; }
+.drug-card { height: 100%; min-height: 130px; display: flex; flex-direction: column; justify-content: space-between; gap: 12px; padding: 20px; border: 1px solid var(--border); border-radius: 20px; background: var(--surface); color: var(--text); text-decoration: none; transition: border-color 0.15s ease; }
+.drug-card:hover { border-color: var(--ink); }
+.drug-card:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+.drug-card.done { opacity: 0.5; }
+.drug-card h2 { margin: 0; font-size: 1.2rem; font-weight: 700; line-height: 1.2; overflow-wrap: anywhere; }
+.drug-card-count { font-size: 0.9rem; color: var(--muted); }

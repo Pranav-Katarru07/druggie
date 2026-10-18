@@ -4,6 +4,7 @@
     "patient_id": "958114b2-7fea-ddc9-77f0-b803f1235869",
     "drug": {
       "description": "amiodarone hydrochloride 200 MG Oral Tablet",
+      "code": "833528",
       "start": "2022-03-01",
       "stop": "2022-04-15",
       "reason": "Atrial fibrillation (disorder)"
@@ -11,8 +12,20 @@
     "condition": {
       "description": "Hepatic enzyme increased (disorder)",
       "start": "2022-04-12",
-      "stop": "2022-05-20"
+      "stop": "2022-05-20",
+      "objective_evidence": "ALT 186 U/L (about 4x upper limit of normal) on 2022-04-12"
     },
+    "symptoms": [
+      {"description": "Fatigue (finding)", "start": "2022-04-10"},
+      {"description": "Nausea (finding)", "start": "2022-04-11"},
+      {"description": "Pain in right upper quadrant of abdomen (finding)", "start": "2022-04-12"}
+    ],
+    "labs": [
+      {"date": "2022-04-12", "code": "1742-6", "value": 186, "units": "U/L"},
+      {"date": "2022-04-12", "code": "1920-8", "value": 142, "units": "U/L"},
+      {"date": "2022-04-29", "code": "1742-6", "value": 97, "units": "U/L"},
+      {"date": "2022-05-20", "code": "1742-6", "value": 31, "units": "U/L"}
+    ],
     "answer": {
       "cause": "amiodarone hydrochloride 200 MG Oral Tablet",
       "why": "Liver enzymes rose 6 weeks after starting amiodarone and returned to normal about 5 weeks after it was stopped (positive dechallenge). Amiodarone's label warns of hepatic injury."

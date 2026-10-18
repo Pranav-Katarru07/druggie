@@ -8,16 +8,10 @@ export default function AppLayout() {
   return (
     <div className="shell">
       <header className="shell-header">
-        <div className="brand">
-          <span className="brand-mark" aria-hidden>Rx</span>
-          <div>
-            <h1>Druggie</h1>
-            <p>Draft evidence for physician review, not a final determination</p>
-          </div>
-        </div>
+        <span className="wordmark">Druggie</span>
         <nav className="nav" aria-label="Pages">
           <NavLink to="/review">Review</NavLink>
-          <NavLink to="/browse">Browse</NavLink>
+          <NavLink to="/patients">Patients</NavLink>
         </nav>
       </header>
 

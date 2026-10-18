@@ -1,13 +1,16 @@
+import { Link } from "react-router";
 import type { ReviewCard } from "./reviewCards";
-import { DECISION_LABEL, type Decisions } from "./useDecisions";
+import type { Decisions } from "./useDecisions";
 
 function exportDecisions(cards: ReviewCard[], decisions: Decisions) {
   const rows = cards
     .filter((c) => decisions[c.key])
     .map((c) => ({
-      patient_id: c.patient.id,
-      drug: c.drug.name,
-      reactions: c.perReaction.map((r) => r.reaction),
+      case_id: c.patient.id,
+      patient: c.patient.name ?? null,
+      symptoms: c.patient.reactions,
+      top_drug: c.clearTop ? c.ranked[0].drug.name : null,
+      score: c.ranked[0].score,
       decision: decisions[c.key].decision,
       decided_at: decisions[c.key].at,
     }));
@@ -20,29 +23,14 @@ function exportDecisions(cards: ReviewCard[], decisions: Decisions) {
 }
 
 export default function ReviewSummary({ cards, decisions, onReset }: { cards: ReviewCard[]; decisions: Decisions; onReset: () => void }) {
-  const counts = { cause: 0, not_cause: 0, unsure: 0 };
-  for (const c of cards) {
-    const d = decisions[c.key]?.decision;
-    if (d) counts[d]++;
-  }
-
   return (
     <div className="summary">
-      <h2>All cards reviewed</h2>
-      <p className="muted">Decisions are saved in this browser. Pick any card in the queue to change it.</p>
-      <div className="summary-counts">
-        {(Object.keys(counts) as (keyof typeof counts)[]).map((k) => (
-          <div key={k} className={`stat ${k === "cause" ? "for" : k === "not_cause" ? "against" : ""}`}>
-            <strong>{counts[k]}</strong>
-            <span>{DECISION_LABEL[k]}</span>
-          </div>
-        ))}
-      </div>
+      <h2>All done</h2>
+      <p className="muted">{cards.length} {cards.length === 1 ? "case" : "cases"} reviewed.</p>
       <div className="summary-actions">
-        <button type="button" className="button primary" onClick={() => exportDecisions(cards, decisions)}>
-          Export decisions (JSON)
-        </button>
-        <button type="button" className="text-button" onClick={onReset}>Start over</button>
+        <button type="button" className="button dark" onClick={() => exportDecisions(cards, decisions)}>Export</button>
+        <button type="button" className="button" onClick={onReset}>Start over</button>
+        <Link to="/review" className="button">All drugs</Link>
       </div>
     </div>
   );

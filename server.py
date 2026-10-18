@@ -9,6 +9,7 @@ Run:  python3 server.py   (reads settings from .env)
 import json
 import os
 import re
+import time
 import urllib.error
 import urllib.request
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -44,9 +45,9 @@ drug and reaction pair. Treat the reactions together as one clinical picture: lo
 best explains the combination (a drug whose known effects cover several reactions is a stronger
 candidate than one that only matches a single reaction). Say which reactions each drug explains and
 which reactions no drug explains well.
-The evidence was collected by keyword matching, so a quoted label sentence may NOT actually support
-causation (e.g. it may show the rate was lower than placebo, or describe a precaution, not a side effect).
-Read each quote and judge what it really says.
+Evidence items are facts from the record (when each drug was started/stopped, what it was prescribed for)
+and answers to Naranjo questions where they have been computed. Weigh timing carefully: a drug started
+shortly before a symptom is a more plausible cause than one taken for years.
 
 Rules:
 - Use only the evidence given. Do not invent dates, lab values or history.
@@ -70,67 +71,30 @@ Reply with JSON only, in this shape:
 
 
 def build_prompt(patient, assessments):
-    """Group evidence by drug, then by reaction, so the model sees each drug's whole footprint."""
+    """Numbered evidence per drug: record facts (dates, indication) plus any computed question answers."""
     evidence = {}
+
+    def add(drug, reaction, kind, text):
+        eid = f"E{len(evidence) + 1}"
+        evidence[eid] = {"drug": drug, "reaction": reaction, "kind": kind, "text": text}
+        return f"    [{eid}] {text}"
+
     reactions = [a["reaction"] for a in assessments]
     lines = [f"Patient: {patient['sex']}, age {patient.get('age') or 'unknown'}",
-             "Reactions: " + "; ".join(reactions)]
-    skipped = [a["reaction"] for a in patient["assessment"] if not a["assessable"]]
-    if skipped:
-        lines.append("Also reported (usage problems, not clinical reactions): " + "; ".join(skipped))
-    lines.append("")
-
+             "Reactions: " + "; ".join(reactions) + (f" (began {patient['onset']})" if patient.get("onset") else ""), ""]
     for drug in patient["drugs"]:
-        ind = drug.get("indication")
-        lines.append(f"Drug: {drug['name']} ({drug['role']})" + (f", taken for {ind}" if ind else ""))
+        lines.append(f"Drug: {drug['name']}")
+        if drug.get("started"):
+            lines.append(add(drug["name"], "", "fact", f"Taken {drug['started']} to {drug.get('stopped') or 'ongoing'}"))
+        if drug.get("indication"):
+            lines.append(add(drug["name"], "", "fact", f"Prescribed for {drug['indication']}"))
         for a in assessments:
             candidate = next((c for c in a["drugs"] if c["name"] == drug["name"]), None)
-            if not candidate:
-                continue
-            lines.append(f"  Reaction: {a['reaction']}")
-            for kind in ("for", "against", "unknown"):
-                for r in candidate[kind]:
-                    eid = f"E{len(evidence) + 1}"
-                    evidence[eid] = {"drug": drug["name"], "reaction": a["reaction"], "kind": kind, **r}
-                    text = f"    [{eid}] ({kind}) {r['text']}"
-                    if r.get("quote"):
-                        text += f' Label quote ({r["section"]}): "{r["quote"]}"'
-                    lines.append(text)
+            for ans in (candidate or {}).get("answers", []):
+                lines.append(add(drug["name"], a["reaction"], "answer",
+                                 f"{a['reaction']}: {ans['question']} {ans['answer']} ({ans['points']:+d}): {ans['why']}"))
         lines.append("")
     return "\n".join(lines), evidence
-
-
-# Same shape as in SYSTEM_PROMPT; sent as a strict schema so providers that
-# support structured output are forced to return exactly this
-_str_list = {"type": "array", "items": {"type": "string"}}
-RESPONSE_SCHEMA = {
-    "type": "object",
-    "additionalProperties": False,
-    "required": ["most_likely", "confidence", "summary", "drugs", "unexplained_reactions", "missing_information"],
-    "properties": {
-        "most_likely": {"type": ["string", "null"]},
-        "confidence": {"type": "string", "enum": ["low", "medium", "high"]},
-        "summary": {"type": "string"},
-        "drugs": {"type": "array", "items": {
-            "type": "object",
-            "additionalProperties": False,
-            "required": ["name", "assessment", "explains", "reasons"],
-            "properties": {
-                "name": {"type": "string"},
-                "assessment": {"type": "string", "enum": ["more likely", "possible", "less likely", "can't tell"]},
-                "explains": _str_list,
-                "reasons": {"type": "array", "items": {
-                    "type": "object",
-                    "additionalProperties": False,
-                    "required": ["text", "evidence"],
-                    "properties": {"text": {"type": "string"}, "evidence": _str_list},
-                }},
-            },
-        }},
-        "unexplained_reactions": _str_list,
-        "missing_information": _str_list,
-    },
-}
 
 
 def post_chat(cfg, body):
@@ -211,7 +175,31 @@ def suggest(patient_id, cfg):
     return 200, result
 
 
+# ---------- live log: print what the physician is looking at ----------
+
+def log_view(req):
+    """Print the raw Synthea rows and openFDA labels behind what's on screen.
+    Decisions only print the short summary, since the raw data was shown when the card came up."""
+    from raw_dump import dump_case  # imported lazily: it loads the Synthea CSVs on first use
+
+    with open(DATA_FILE) as f:
+        cases = json.load(f)
+    event = req.get("event", "viewed")
+    if req.get("person_id"):  # Patients page: every case for that person
+        targets = [c for c in cases if c.get("person_id") == req["person_id"]]
+    else:
+        targets = [c for c in cases if c["id"] == req.get("case_id")]
+    for case in targets:
+        if event.startswith("Decision"):
+            print(f"\n[{time.strftime('%H:%M:%S')}] {event}: case {case['id']} ({case.get('name', '')})", flush=True)
+        else:
+            print(dump_case(case, f"[{time.strftime('%H:%M:%S')}] {event}"), flush=True)
+
+
 class Handler(BaseHTTPRequestHandler):
+    def log_message(self, *args):
+        pass  # keep the terminal for the case printouts, not request lines
+
     def _send(self, status, payload):
         body = json.dumps(payload).encode()
         self.send_response(status)
@@ -221,6 +209,13 @@ class Handler(BaseHTTPRequestHandler):
         self.wfile.write(body)
 
     def do_POST(self):
+        if self.path == "/api/log":
+            try:
+                length = int(self.headers.get("Content-Length", 0))
+                log_view(json.loads(self.rfile.read(length) or b"{}"))
+            except Exception as e:
+                print(f"(log failed: {e})", flush=True)
+            return self._send(200, {"ok": True})
         if self.path != "/api/suggest":
             return self._send(404, {"error": "Not found."})
         cfg = config()

@@ -1,9 +1,9 @@
 .ai-bar { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 .ai-error { color: var(--against); font-size: 0.85rem; }
 
-.ai-panel { border: 1px solid var(--accent-soft-border); background: var(--ai-bg); border-radius: 12px; padding: 14px 16px; }
+.ai-panel { border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; }
 .ai-head { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
-.ai-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent); }
+.ai-label { font-size: 0.85rem; font-weight: 600; }
 .ai-regen { margin-left: auto; font-size: 0.8rem; }
 .pill.conf-low { color: var(--muted); border-color: var(--border); }
 .pill.conf-medium { color: var(--suspect-fg); border-color: var(--suspect-fg); }

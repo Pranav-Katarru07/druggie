@@ -9,7 +9,7 @@ export default function AiSuggestion({ patientId, highlight }: { patientId: stri
     return (
       <div className="ai-bar">
         <button type="button" className="button primary" onClick={run} disabled={state.status === "loading"}>
-          {state.status === "loading" ? "Asking AI… (can take a minute)" : "Get AI suggestion (all reactions)"}
+          {state.status === "loading" ? "Asking…" : "Ask AI"}
         </button>
         {state.status === "error" && <span className="ai-error">{state.message}</span>}
       </div>
@@ -28,7 +28,7 @@ function SuggestionPanel({ s, highlight, onRegenerate }: { s: Suggestion; highli
   return (
     <div className="ai-panel">
       <div className="ai-head">
-        <span className="ai-label">AI draft · for physician review</span>
+        <span className="ai-label">AI draft</span>
         <span className={`pill conf-${s.confidence}`}>{s.confidence} confidence</span>
         <button type="button" className="text-button ai-regen" onClick={onRegenerate}>Regenerate</button>
       </div>
@@ -63,8 +63,7 @@ function SuggestionPanel({ s, highlight, onRegenerate }: { s: Suggestion; highli
                   <details key={e.id} className="cite">
                     <summary>{e.id}</summary>
                     <span className="cite-body">
-                      <em>{e.drug} · {e.reaction}:</em> {e.text}
-                      {e.quote && <blockquote><span className="quote-source">{e.section}</span>“{e.quote}”</blockquote>}
+                      <em>{e.drug}</em>: {e.text}
                     </span>
                   </details>
                 ))}
