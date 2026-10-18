@@ -4,7 +4,7 @@ Keeps the API key off the browser: the React app POSTs to /api/suggest, this
 server builds a prompt from the evidence extractData.py already collected, and
 asks an OpenAI-compatible LLM (Gemini by default) for a draft.
 
-Run:  python3 server.py   (reads settings from .env)
+Run:  python server.py   (reads settings from .env)
 """
 import json
 import os
@@ -68,6 +68,43 @@ Reply with JSON only, in this shape:
   "unexplained_reactions": ["<reactions no drug explains well>"],
   "missing_information": ["<what would change the assessment>"]
 }"""
+
+# The same shape as a JSON schema, so providers that support strict structured output enforce it
+_STR_LIST = {"type": "array", "items": {"type": "string"}}
+RESPONSE_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "most_likely": {"type": ["string", "null"]},
+        "confidence": {"type": "string", "enum": ["low", "medium", "high"]},
+        "summary": {"type": "string"},
+        "drugs": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {"type": "string"},
+                    "assessment": {"type": "string", "enum": ["more likely", "possible", "less likely", "can't tell"]},
+                    "explains": _STR_LIST,
+                    "reasons": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {"text": {"type": "string"}, "evidence": _STR_LIST},
+                            "required": ["text", "evidence"],
+                            "additionalProperties": False,
+                        },
+                    },
+                },
+                "required": ["name", "assessment", "explains", "reasons"],
+                "additionalProperties": False,
+            },
+        },
+        "unexplained_reactions": _STR_LIST,
+        "missing_information": _STR_LIST,
+    },
+    "required": ["most_likely", "confidence", "summary", "drugs", "unexplained_reactions", "missing_information"],
+    "additionalProperties": False,
+}
 
 
 def build_prompt(patient, assessments):
