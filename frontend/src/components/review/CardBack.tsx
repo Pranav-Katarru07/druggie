@@ -3,10 +3,11 @@ import { day } from "../../data/dates";
 import { shortDrugName } from "../../data/drugName";
 import type { Answer } from "../../types";
 import AiSuggestion from "../ai/AiSuggestion";
+import CaseInsight from "../../insights/CaseInsight";
 import CleanedDataPanel from "./CleanedDataPanel";
 import type { RankedDrug, ReviewCard } from "./reviewCards";
 
-const PAGES = ["Drug", "Reasons", "Data"];
+const PAGES = ["Drug", "Reasons", "Data", "Insights"];
 const LABEL_TEXT_CAP = 1500; // extractData.py MAX_TEXT: label sections are cut to this length
 const ANSWER = { yes: "Yes", no: "No", unknown: "Don't know" };
 
@@ -40,6 +41,7 @@ export default function CardBack({ card, onFlipBack }: { card: ReviewCard; onFli
         {page === 0 && <DrugPage top={top} />}
         {page === 1 && <ReasonsPage card={card} top={top} rest={rest} />}
         {page === 2 && <CleanedDataPanel data={card.patient.cleaned} />}
+        {page === 3 && <CaseInsight caseId={card.patient.id} />}
       </div>
     </div>
   );

@@ -12,6 +12,7 @@ export default function AppLayout() {
         <nav className="nav" aria-label="Pages">
           <NavLink to="/review">Review</NavLink>
           <NavLink to="/patients">Patients</NavLink>
+          <NavLink to="/insights">Insights</NavLink>
         </nav>
       </header>
 
