@@ -1,0 +1,11 @@
+.env
+.env.*
+!.env.example
+synthea/
+fhir/
+csv/
+raw_logs/
+report.json
+**/node_modules
+frontend/dist
+__pycache__/

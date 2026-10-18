@@ -255,21 +255,25 @@ class Handler(BaseHTTPRequestHandler):
             return self._send(200, {"ok": True})
         if self.path != "/api/suggest":
             return self._send(404, {"error": "Not found."})
-        cfg = config()
-        if not cfg["api_key"]:
-            return self._send(500, {"error": "No API key. Paste it after LLM_API_KEY= in the .env file."})
-        try:
-            length = int(self.headers.get("Content-Length", 0))
-            req = json.loads(self.rfile.read(length) or b"{}")
-            status, payload = suggest(req.get("patient_id"), cfg)
-        except urllib.error.HTTPError as e:
-            detail = e.read().decode(errors="replace")[:300]
-            status, payload = 502, {"error": f"The AI provider returned HTTP {e.code}: {detail}"}
-        except (ValueError, KeyError, TypeError) as e:
-            status, payload = 502, {"error": f"Couldn't read the AI's answer: {e}."}
-        except Exception as e:  # keep the server alive and report the problem to the UI
-            status, payload = 500, {"error": str(e)}
-        self._send(status, payload)
+        length = int(self.headers.get("Content-Length", 0))
+        self._send(*handle_suggest(self.rfile.read(length)))
+
+
+def handle_suggest(raw_body):
+    """POST /api/suggest body → (status, payload). Shared with the Vercel function in api/suggest.py."""
+    cfg = config()
+    if not cfg["api_key"]:
+        return 500, {"error": "No API key. Set LLM_API_KEY in .env (or in the Vercel project's environment variables)."}
+    try:
+        req = json.loads(raw_body or b"{}")
+        return suggest(req.get("patient_id"), cfg)
+    except urllib.error.HTTPError as e:
+        detail = e.read().decode(errors="replace")[:300]
+        return 502, {"error": f"The AI provider returned HTTP {e.code}: {detail}"}
+    except (ValueError, KeyError, TypeError) as e:
+        return 502, {"error": f"Couldn't read the AI's answer: {e}."}
+    except Exception as e:  # keep the server alive and report the problem to the UI
+        return 500, {"error": str(e)}
 
 
 if __name__ == "__main__":
