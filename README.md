@@ -4,6 +4,14 @@
 
 Built at HackHarvard 2026 for the Regeneron "Reinvent Clinical Trials" challenge (Sus or Not).
 
+<p align="center">
+  <img src="docs/images/ui-card-front.png" alt="A review card: patient, event and onset on the front" width="49%" />
+  <img src="docs/images/ui-card-drug.png" alt="The flipped card: suspected drug, FDA boxed warning and scored reasons" width="49%" />
+</p>
+<p align="center"><sub>Front of a card (left) and the same card flipped to its evidence (right).</sub></p>
+
+**Contents:** [Problem](#the-problem) · [What it does](#what-druggie-does) · [Screenshots](#screenshots) · [How it works](#how-it-works) · [Tech stack](#tech-stack) · [Run it](#run-it) · [Limits](#limits-stated-plainly)
+
 ---
 
 ## The problem
@@ -69,23 +77,59 @@ The **AI suggestion** button sends the case's evidence to a language model (Gemi
 
 **The doctor still decides.** Druggie never files a report and never makes a causality call. It does the gathering and the sorting, so the reviewer spends their time on judgement instead of searching.
 
+## Screenshots
+
+### Review: pick a deck, swipe a case
+| Drug decks | Swiping right to agree |
+|---|---|
+| ![Drug decks, one per most-likely cause](docs/images/ui-drug-decks.png) | ![A card mid-swipe with the AGREE stamp](docs/images/ui-swipe.png) |
+
+### The back of the card: four tabs of evidence
+A planted liver-injury case on amiodarone scores **5 (probable)**. Each point links to its evidence: the quoted FDA label line, the 6-week gap, and ALT falling from 186 to 31 U/L after the drug was stopped.
+
+| Reasons: every Naranjo answer with its evidence | Data: the cleaned source record |
+|---|---|
+| ![Naranjo questions answered with reasons](docs/images/ui-card-reasons.png) | ![Cleaned data: reactions, drug courses, label sections, lab trend](docs/images/ui-card-data.png) |
+
+| Insights: this patient against the population |
+|---|
+| ![Card insights: group, signals and similar cases](docs/images/ui-card-insights.png) |
+
+### Insights: what to look at first
+![Insights page: patient count, groups, signals and the "swipe these first" queue](docs/images/ui-insights.png)
+
+| Groups of similar patients (PCA + k-means) | Knowledge graph of drugs and conditions |
+|---|---|
+| ![PCA cluster map](docs/images/ui-clusters.png) | ![Knowledge graph](docs/images/ui-knowledge-graph.png) |
+
+![Drug to condition signals table, PRR with the Evans criteria](docs/images/ui-signals.png)
+
+### Patients: every case for one person
+![Patients page](docs/images/ui-patients.png)
+
 ## How it works
 
-```
-Synthea patients (CSV)            openFDA drug labels      RxNorm (NLM)
-        │                                │                     │
-        └────────────► synthea_pipeline.py ◄───────────────────┘
-                         cases, cleaned data, Naranjo answers
-                                     │
-                     frontend/public/data.json
-                                     │
-         analytics/ (python -m analytics) ──► frontend/public/insights.json
-           PCA · k-means · PRR signals · knowledge graph · priority
-                                     │
-                  React app (Vite): Review · Patients · Insights
-                                     │
-                  server.py ──► LLM for the optional AI draft
-```
+![The reviewer's flow in five steps: sort, open a deck, read the front, flip for evidence, decide](docs/images/diagram-flow.png)
+
+Behind each card, two engines run ahead of time. One scores every drug a patient was on against the Naranjo questions. The other compares the patient with the whole population to decide what the reviewer should see first.
+
+![Two engines: per-case Naranjo scoring and population insights (PCA, k-means, PRR, priority)](docs/images/diagram-engine.png)
+
+## Tech stack
+
+![Architecture: data sources, Python pipeline, static JSON, React app and the optional LLM server](docs/images/diagram-architecture.png)
+
+| Layer | Tools |
+|---|---|
+| Frontend | React 19, TypeScript, Vite, React Router, d3-force (knowledge graph), plain CSS |
+| Data pipeline | Python 3.11+ standard library (`synthea_pipeline.py`, `extractData.py`) |
+| Analytics | numpy, scikit-learn (PCA, k-means, silhouette), pytest |
+| AI draft | `server.py` (Python standard library HTTP server) calling any OpenAI-compatible API: Gemini by default, Groq or OpenRouter |
+| Data | Synthea (synthetic patients), openFDA drug labels and FAERS, RxNorm from the NLM |
+
+The diagrams are generated from [docs/diagrams/diagrams.html](docs/diagrams/diagrams.html).
+
+### Project layout
 
 | Part | What it does |
 |---|---|
